@@ -65,122 +65,134 @@ li {
 }
 
 /*! хедер */
-.top-wrapper {
-	background-color: @background-black;
+.main-header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 
-	.container {
-		display: flex;
-		flex-direction: row;
-		-webkit-justify-content: space-between;
-				  justify-content: space-between;
-		flex-wrap: wrap;
-		width: @var-width-container;
-		margin: 0 auto;
-		padding: 15px 0px 12px 0px;
-		
-		.header-logo {
-			cursor: pointer;
-		}
+	.top-wrapper {
+		background-color: @background-black;
 
-		.navigation { /*! меню */
+		.container {
+			display: flex;
+			flex-direction: row;
+			-webkit-justify-content: space-between;
+					  justify-content: space-between;
+			flex-wrap: wrap;
+			max-width: @var-width-container;
+			min-width: 671px;
+			margin: 0 auto;
+			padding: 15px 0px 12px 0px;
+			
+			.header-logo {
+				cursor: pointer;
+			}
 
-			.container {
+			.navigation { /*! меню */
 
-				font-size: 14px;
-				display: flex;
-				flex-direction: row;
-				-webkit-justify-content: space-between;
-						  justify-content: space-between;
-				flex-wrap: wrap;
-				width: @var-width-container2;
-				padding-top: 28px;
-				
-				li {
-					cursor: pointer;
-					position:relative;
+				.container {
 
-					.arrow-mini {
-						fill: #f2a765;
-					}
+					font-size: 14px;
+					display: flex;
+					flex-direction: row;
+					-webkit-justify-content: space-between;
+							  justify-content: space-between;
+					flex-wrap: wrap;
+					min-width: @var-width-container2;
+					padding-top: 28px;
+					
+					li {
+						cursor: pointer;
+						position:relative;
 
-					.menu {
-						display: none;
-						position:absolute;
-						z-index:1;
-						padding: 0px 5px 5px 5px;
-						background-color: #333333;
-						font-size: 13px;
-						li {
-							padding-top: 10px;
+						.arrow-mini {
+							fill: #f2a765;
 						}
-						a:hover {
+
+						.menu {
+							display: none;
+							position:absolute;
+							z-index:1;
+							padding: 0px 5px 5px 5px;
+							background-color: #333333;
+							font-size: 13px;
+							li {
+								padding-top: 10px;
+							}
+							a:hover {
+								color: #c0d294;
+							}
+						}
+
+						.nav-button:hover {
 							color: #c0d294;
 						}
-					}
 
-					.nav-button:hover {
-						color: #c0d294;
+						.nav-button:hover + .arrow-mini {
+							fill: #c0d294;
+						}
 					}
-
-					.nav-button:hover + .arrow-mini {
-						fill: #c0d294;
+					li:hover .menu {
+						display: block;
 					}
-				}
-				li:hover .menu {
-					display: block;
 				}
 			}
 		}
 	}
-}
-.bottom-wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 0 auto;
-	padding: 15px 0px;
-	width: @var-width-container;
 
-	.language {
-		display: flex;
-		margin-left: 25px;
+	.bottom-wrapper {
 
-		.lang-img {
-			border-radius: 50%;
-			border: 1px solid #a9a9a8;
-		}
+		.container {
+			display: flex;
+			flex-direction: row;
+			-webkit-justify-content: space-between;
+					justify-content: space-between;
+			margin: 0 auto;
+			padding: 15px 0px;
+			max-width: @var-width-container;
+			min-width: 671px;
 
-		a {
-			margin: 4px 0px 4px 3px;
-			border: 1px solid transparent;
-			border-radius: 2px;
-			font-size: 16px;
-			font-weight: bold;
-			color: #333333;
-			&:hover {
-				border: 1px solid #a9a9a8;
+			.language {
+				display: flex;
+				margin-left: 25px;
+
+				.lang-img {
+					border-radius: 50%;
+					border: 1px solid #a9a9a8;
+				}
+
+				a {
+					margin: 4px 0px 4px 3px;
+					border: 1px solid transparent;
+					border-radius: 2px;
+					font-size: 16px;
+					font-weight: bold;
+					color: #333333;
+					&:hover {
+						border: 1px solid #a9a9a8;
+					}
+				}
 			}
-		}
-	}
+		/*! поиск */
+			.search {
+				position: relative;
+				display: flex;
 
-/*! поиск */
-	.search {
-		position: relative;
-		display: flex;
-
-		.main-search {
-			border: 1px solid #a9a9a8;
-			border-radius: 3px;
-			width: @var-width-container2;
-			outline: none;
-			font-size: 14px;
-			color: #333333;
-		}
-		.img-search {
-			z-index: 1;
-			margin: 5px 0px 0px -19px;
-			fill: #748943;
-		}
+				.main-search {
+					border: 1px solid #a9a9a8;
+					border-radius: 3px;
+					width: @var-width-container2;
+					outline: none;
+					font-size: 14px;
+					color: #333333;
+				}
+				.img-search {
+					z-index: 1;
+					margin: 5px 0px 0px -19px;
+					fill: #748943;
+				}
+			}
+		}	
 	}
 }
 
