@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 
+	<link type="image/x-icon" rel="shortcut icon" href="img/favicon_32.ico">
+	<link type="image/png" sizes="16x16" rel="icon" href="img/favicon_16.png">
+	<link type="image/png" sizes="32x32" rel="icon" href="img/favicon_32.png">
+	<link type="image/png" sizes="96x96" rel="icon" href="img/favicon_96.png">
+	<link type="image/png" sizes="120x120" rel="icon" href="img/favicon_120.png">
+
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -11,63 +17,99 @@
 </head>
 <body>
 	<header class="main-header"> <!-- Шапка сайта -->
-		<div class="container">
-			<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
-				<img src="img/logo.gif" width="95" height="69" alt="logo greennovo">
-			</a>
-			<nav class="navigation">
-				<ul class="container">
-					<li><a class="nav-button" href="#">About Greennovo</a></li>
-					<li><a class="nav-button" href="#">Product Center</a>
-						<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-							<g>
-								<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-							</g>
-						</svg>
-						<ul class="menu">
-							<li><a href="#">Greennovo Motor</a></li>
-							<li><a href="#">Battery</a></li>
-							<li><a href="#">Display</a></li>
-							<li><a href="#">Controller</a></li>
-						</ul>
-					</li>
-					<li><a class="nav-button" href="#">R&D Innovation</a>
-						<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-							<g>
-								<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-							</g>
-						</svg>
-						<ul class="menu">
-							<li><a href="#">Innovation Idea</a></li>
-							<li><a href="#">Qualification Certificates</a></li>
-							<li><a href="#">Test Laboratory</a></li>
-							<li><a href="#">Manufacturing Base</a></li>
-						</ul>
-					</li>
-					<li><a class="nav-button" href="#">Support&Service</a>
-						<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-							<g>
-								<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-							</g>
-						</svg>
-						<ul class="menu">
-							<li><a href="#">Global Service /Russia Center</a></li>
-							<li><a href="#">Service Concep</a></li>
-							<li><a href="#">After-Sale Service</a></li>
-							<li><a href="#">Technology Support</a></li>
-						</ul>
-					</li>
-					<li><a class="nav-button" href="#">Contact Us</a></li>
-				</ul>
-			</nav>
+		<div class="top-wrapper">
+			<div class="container">
+				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
+					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
+				</a>
+				<nav class="navigation">
+					<ul class="container">
+						<li><a class="nav-button" href="#">About Greennovo</a></li>
+						<li><a class="nav-button" href="#">Product Center</a>
+							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
+								<g>
+									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+								</g>
+							</svg>
+							<ul class="menu">
+								<li><a href="#">Greennovo Motor</a></li>
+								<li><a href="#">Battery</a></li>
+								<li><a href="#">Display</a></li>
+								<li><a href="#">Controller</a></li>
+							</ul>
+						</li>
+						<li><a class="nav-button" href="#">R&D Innovation</a>
+							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
+								<g>
+									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+								</g>
+							</svg>
+							<ul class="menu">
+								<li><a href="#">Innovation Idea</a></li>
+								<li><a href="#">Qualification Certificates</a></li>
+								<li><a href="#">Test Laboratory</a></li>
+								<li><a href="#">Manufacturing Base</a></li>
+							</ul>
+						</li>
+						<li><a class="nav-button" href="#">Support&Service</a>
+							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
+								<g>
+									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+								</g>
+							</svg>
+							<ul class="menu">
+								<li><a href="#">Global Service /Russia Center</a></li>
+								<li><a href="#">Service Concep</a></li>
+								<li><a href="#">After-Sale Service</a></li>
+								<li><a href="#">Technology Support</a></li>
+							</ul>
+						</li>
+						<li><a class="nav-button" href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="bottom-wrapper">
+			<div class="language">
+				<img class="lang-img" src="img/lang.gif" width="25" height="25">
+				<a href="">En</a>
+			</div>
+			<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
+				<input type="search" name="Search" class="main-search" placeholder="Site search">
+				<svg class="img-search" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+					<path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+				</svg>
+			</form>
 		</div>
 	</header>
-	<div class="bar">
-		<div class="language">
-			<img src="img/lang.gif" width="25" height="25">
-			<a href=""></a>
+	<div class="slider">
+		<div class="content">
+			<div class="container">
+				<h1>Rear motor <span class="last-word">R-series</span></h1>
+				<span>R-series are in High Power,Low noise and High Efficiency.
+						All with compact design to get higher Torque.
+				</span>
+				<a class="slider-button" href="#">More details</a>
+			</div>
+			
 		</div>
 	</div>
 
+
+<!-- СКРИПТЫ -->
+<script> //Подсветка последнего слова в заголовке
+	$(document).ready(function() {
+		$('.title').each(function(index, element) {
+			var heading = $(element);
+			var word_array, last_word, first_part;
+
+			word_array = heading.html().split(/\s+/); // split on spaces
+			last_word = word_array.pop();					// pop the last word
+			first_part = word_array.join(' ');			// rejoin the first words together
+
+			heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
+		});
+	});
+</script>
 </body>
 </html>
