@@ -31,8 +31,9 @@
 
 //переменные
 @background-black: #333333;
-@var-width-container: 1200px;
-@var-width-container2: 600px;
+@var-width: 1200px;
+@var-width-2: 600px;
+@var-min-width: 578px;
 
 /*! общие стили */
 
@@ -60,17 +61,21 @@ a {
 	color: #ffffff;
 }
 
+ul {
+	padding: 0px;
+}
 li {
 	list-style-type: none;
 }
 
 /*! хедер */
 .main-header {
-	width: 100%;
+
 	display: flex;
 	flex-direction: column;
 
 	.top-wrapper {
+		width: 100%;
 		background-color: @background-black;
 
 		.container {
@@ -78,8 +83,7 @@ li {
 			flex-direction: row;
 			-webkit-justify-content: space-between;
 					justify-content: space-between;
-			max-width: @var-width-container;
-			min-width: 651px;
+			max-width: @var-width;
 			margin: 0 auto;
 			padding: 15px 0px 12px 0px;
 			
@@ -88,18 +92,18 @@ li {
 			}
 
 			.navigation { /*! меню */
+				width: @var-width-2;
+				min-width: @var-min-width;
+				padding-top: 14px;
 
 				.container {
-
 					font-size: 14px;
 					display: flex;
 					flex-direction: row;
 					-webkit-justify-content: space-between;
 							justify-content: space-between;
 					flex-wrap: wrap;
-					min-width: @var-width-container2;
-					padding-top: 28px;
-					
+					width: 100%;
 					li {
 						cursor: pointer;
 						position:relative;
@@ -148,12 +152,12 @@ li {
 					justify-content: space-between;
 			margin: 0 auto;
 			padding: 15px 0px;
-			max-width: @var-width-container;
-			min-width: 671px;
+			max-width: @var-width;
+			min-width: @var-min-width;
 
 			.language {
 				display: flex;
-				margin-left: 25px;
+				margin: 0 20px 0 25px;
 
 				.lang-img {
 					border-radius: 50%;
@@ -176,11 +180,13 @@ li {
 			.search {
 				position: relative;
 				display: flex;
+				max-width: @var-width-2;
+				min-width: @var-min-width;
 
 				.main-search {
 					border: 1px solid #a9a9a8;
 					border-radius: 3px;
-					width: @var-width-container2;
+					width: @var-width-2;
 					outline: none;
 					font-size: 14px;
 					color: #333333;
