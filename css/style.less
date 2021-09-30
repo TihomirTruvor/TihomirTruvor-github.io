@@ -1,4 +1,4 @@
-/*! шрифты */
+/*!=================FONTS======================*/
 @font-face {
 			font-family: "DINPro";
 			src: url("../fonts/DINPro.woff2") format("woff2"),
@@ -17,7 +17,7 @@
 			font-display: swap;
 }
 
-/*! миксины */
+/*!=================MIXIN======================*/
 .green-button {
 	padding: 15px 69px 15px 68px;
 	border-radius: 3px;
@@ -29,14 +29,13 @@
 	}
 }
 
-//переменные
+/*=================VAR======================*/
 @background-black: #333333;
 @var-width: 1200px;
 @var-width-2: 600px;
 @var-min-width: 578px;
 
-/*! общие стили */
-
+/*!=================ALL STYLE======================*/
 body {
 	font-family: 'DINPro', sans-serif;
 }
@@ -68,7 +67,7 @@ li {
 	list-style-type: none;
 }
 
-/*! хедер */
+/*!=================HEDER======================*/
 .main-header {
 
 	display: flex;
@@ -92,9 +91,36 @@ li {
 			}
 
 			.navigation { /*! меню */
+				display: flex;
 				width: @var-width-2;
 				min-width: @var-min-width;
 				padding-top: 14px;
+				box-sizing: border-box;
+
+				.label-mobile-menu { /*! Для мобильного меню*/
+						display: none;
+					}
+				.label-mobile-menu:after {/*!Для мобильного меню*/
+					position: absolute;
+					content: "\2261";
+					padding: 20px 0;
+					font-size: 90px;
+					line-height: 34px;
+					color: #748943;
+				}
+				.label-mobile-menu:hover:after {/*!Для мобильного меню*/
+						color: #9BC414;
+				}
+				.label-mobile-menu:active:after {/*!Для мобильного меню*/
+						color: #9BC414;
+				}
+
+				#mobile-menu { /*!Для мобильного меню*/
+					visibility: hidden;
+				}
+				input[type="checkbox"]:checked ~ .container { /*Для мобильного меню*/
+					visibility: visible;
+				}
 
 				.container {
 					font-size: 14px;
@@ -104,6 +130,7 @@ li {
 							justify-content: space-between;
 					flex-wrap: wrap;
 					width: 100%;
+
 					li {
 						cursor: pointer;
 						position:relative;
@@ -201,11 +228,11 @@ li {
 	}
 }
 
-/*! слайдер */
+/*!=================SLIDER======================*/
 .slider {
 	display: flex;
 	width: 100%;
-	height: 944px;
+	max-height: 900px;
 	background: url(../img/slider-img.jpg);
 
 	.content {
@@ -219,8 +246,9 @@ li {
 			display: flex;
 			flex-direction: column;
 			margin: 0 auto;
-			padding-top: 30%;
-			width: 45%;
+			padding: 20% 0;
+			max-width: 480px;
+			min-width: 340px;
 			text-align: center;
 
 			h1 {
@@ -242,6 +270,11 @@ li {
 		}
 	} 
 }
+
+
+/*!=================MOBILE STYLE======================*/
+@import url('mobile-style.css');
+
 
 
 
