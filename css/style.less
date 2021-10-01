@@ -29,6 +29,13 @@
 	}
 }
 
+.h1-title {
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: 'DINPro-Bold', sans-serif;
+	font-size: 30px;
+}
+
 /*=================VAR======================*/
 @background-black: #333333;
 @var-width: 1200px;
@@ -41,11 +48,6 @@ body {
 }
 
 h1 {
-	text-transform: uppercase;
-	color: #ffffff;
-	font-family: 'DINPro-Bold', sans-serif;
-	font-size: 30px;
-
 	span {
 		font-size: 30px;
 	}
@@ -84,7 +86,7 @@ li {
 					justify-content: space-between;
 			max-width: @var-width;
 			margin: 0 auto;
-			padding: 15px 5px 13px 5px;
+			padding: 8px 5px 7px 5px;
 			
 			.header-logo {
 				cursor: pointer;
@@ -179,27 +181,23 @@ li {
 			-webkit-justify-content: space-between;
 					justify-content: space-between;
 			margin: 0 auto;
-			padding: 15px 5px 15px 5px;
+			padding: 8px 5px 8px 5px;
 			max-width: @var-width;
 			min-width: @var-min-width;
 
 			.language {
 				display: flex;
-				//margin: 0 20px 0 20px;
-
-				.lang-img {
-					border-radius: 50%;
-					border: 1px solid #a9a9a8;
-				}
-
 				a {
+					width: 95px;
 					border-radius: 2px;
 					margin-right: 2px;
-				    padding: 4px 18px 6px 18px;
-				    background-color: #748943;
-				    font-size: 13px;
-				    font-weight: 500;
-				    color: #ffffff;
+					padding: 4px 0 6px 0;
+					text-align: center;
+					background-color: #748943;
+					font-size: 13px;
+					font-weight: 500;
+					letter-spacing: 1px;
+					color: #ffffff;
 					text-shadow: 1px 1px 1px #333333;
 					&:hover {
 						background-color: #9BC414;
@@ -207,7 +205,7 @@ li {
 					}
 				}
 			}
-		/*! поиск */
+/*!=================SEARCH======================*/
 			.search {
 				position: relative;
 				display: flex;
@@ -256,6 +254,7 @@ li {
 			text-align: center;
 
 			h1 {
+				.h1-title;
 				.last-word {
 					color: #748943;
 				}
@@ -273,6 +272,90 @@ li {
 			}
 		}
 	} 
+}
+
+/*!=================MAIN CONTENT======================*/
+
+.main-content {
+	margin-top: 40px;
+
+	.categories {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: @var-width;
+		margin: 0 auto;
+
+		.product,
+		.innovation,
+		.about-greennovo {
+			overflow: hidden;
+			width: 590px;
+			border-radius: 15px;
+		}
+
+		.innovation,
+		.about-greennovo {
+			position: relative;
+			align-self: flex-end;
+			height: 390px;
+		}
+
+		.product {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 800px;
+		}
+
+		.about-greennovo {
+			margin-top: 20px;
+		}
+
+		.product h2,
+		.innovation h2,
+		.about-greennovo h2 {
+			position: absolute;
+			z-index: 1;
+			.h1-title;
+			width: 100%;
+			text-shadow: 1px 1px 1px #333333;
+			text-align: center;
+		}
+
+		.product a,
+		.innovation a,
+		.about-greennovo a {
+			display: block;
+			position: relative;
+		}
+
+		.innovation h2,
+		.about-greennovo h2 {
+			top: 170px;
+		}
+
+		.product a h2,
+		.innovation a h2,
+		.about-greennovo a h2 {
+			text-align: center;
+			width: 350px;
+			top: 45%;
+			left: 20%;
+		}
+
+		.product a img,
+		.innovation a img,
+		.about-greennovo a img {
+			transition: 2s;
+		}
+
+		.product a img:hover,
+		.innovation a img:hover,
+		.about-greennovo a img:hover {
+			transform: scale(1.2);
+		}
+	}
 }
 
 
