@@ -16,46 +16,53 @@
 
 					.navigation {
 						position: relative;
-						//min-width: 673px;
 
-						.label-mobile-menu {
-							display: block; 
-							position: absolute;
-							right: 66px;
-							top: -5px;
+						.menu__btn {
+							visibility: visible;
 						}
 						.container1 {
 							visibility: hidden;
 							position: absolute;
 							flex-direction: column;
 							width: 767px;
-							padding-top: 15px;
-							top: -30px;
+							padding-top: 0px;
+							margin-top: 0px;
+							top: 70px;
 							right: 0px;
-							text-align: center;
+							text-align: left;
 							font-size: 23px;
 							font-weight: bold;
 							letter-spacing: 1px;
 							text-transform: uppercase;
 							background-color: #333333;
 							z-index: 1;
+							//transition-duration: .25s;
 
-							li {
+							.nav-item {
+								margin-left: 110px;
+								padding: 15px 0px;
 								.arrow-mini {
-									display: none;
+									//display: none;
+									margin: 6px 0 0 6px;
+									transform: rotate(0deg);
 								}
 
-								.menu {
-									position: relative;
-									padding: 0px 0px 15px 0px;
-									background-color: transparent;
+								.sub-menu {
+									position: absolute;
+									top: 15px;
+									left: 36%;
+									margin-top: 0;
+									z-index: 1;
 									font-size: 14px;
+									background-color: transparent;
+									transition: all 1s ease-in;
+
+									li {
+										padding-top: 5px;
+									}
 								}
 							}
 						}
-						/*.modal-close {
-							display: block;
-						}*/
 					}
 				}
 			}

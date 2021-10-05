@@ -24,52 +24,46 @@
 					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
 				</a>
 				<nav class="navigation">
-					<label for="mobile-menu" class="label-mobile-menu"></label><!--Для мобильного меню-->
-					<input type="checkbox" id="mobile-menu"><!--Для мобильного меню-->
-					<ul class="container1">
-						<li><a class="nav-button" href="#">About Greennovo</a></li>
-						<li><a class="nav-button" href="#">Product Center</a>
-							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-								<g>
-									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-								</g>
-							</svg>
-							<ul class="menu">
+
+					<input id="menu__toggle" type="checkbox" /><!--Для мобильного меню-->
+					<label class="menu__btn" for="menu__toggle"><!--Для мобильного меню-->
+						<span></span>
+					</label>
+
+					<div class="container1">
+						<div class="nav-item">
+							<a class="nav-button" href="#">About Greennovo</a>
+						</div>
+						<div class="nav-item">
+							<a class="nav-button" href="#">Product Center</a>
+							<ul class="sub-menu">
 								<li><a href="#">Greennovo Motor</a></li>
 								<li><a href="#">Battery</a></li>
 								<li><a href="#">Display</a></li>
 								<li><a href="#">Controller</a></li>
 							</ul>
-						</li>
-						<li><a class="nav-button" href="#">R&D Innovation</a>
-							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-								<g>
-									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-								</g>
-							</svg>
-							<ul class="menu">
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
+							<ul class="sub-menu">
 								<li><a href="#">Innovation Idea</a></li>
 								<li><a href="#">Qualification Certificates</a></li>
 								<li><a href="#">Test Laboratory</a></li>
 								<li><a href="#">Manufacturing Base</a></li>
 							</ul>
-						</li>
-						<li><a class="nav-button" href="#">Support&Service</a>
-							<svg class="arrow-mini" width="12px" height="12px" viewBox="0 0 270.929 194.929">
-								<g>
-									<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
-								</g>
-							</svg>
-							<ul class="menu">
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
+							<ul class="sub-menu">
 								<li><a href="#">Global Service /Russia Center</a></li>
 								<li><a href="#">Service Concep</a></li>
 								<li><a href="#">After-Sale Service</a></li>
 								<li><a href="#">Technology Support</a></li>
 							</ul>
-						</li>
-						<li><a class="nav-button" href="#">Contact Us</a></li>
-					</ul>
-					<button class="modal-close" type="button">Закрыть</button><!--Для мобильного меню-->
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#">Contact Us</a></div>
+					</div>
 				</nav>
 			</div>
 		</div>
@@ -134,15 +128,49 @@
 
 
 <!-- СКРИПТЫ -->
-<script> //Подсветка последнего слова в заголовке
+
+<script type="text/javascript"> // Меню
+	var el = document.getElementsByClassName('nav-item');
+
+	for(var i=0; i<el.length; i++) {
+		el[i].addEventListener("mouseenter", showSub, false);
+		el[i].addEventListener("mouseleave", hideSub, false);
+	}
+
+	function showSub(e) {
+		if(this.children.length>1) {
+			this.children[1].style.height = "auto";
+			this.children[1].style.overflow = "visible";
+			this.children[1].style.opacity = "1";
+			this.children[1].style.display = "block";
+		} else {
+			return false;
+		}
+	}
+
+	function hideSub(e) {
+		if(this.children.length>1) {
+			this.children[1].style.height = "0px";
+			this.children[1].style.overflow = "hidden";
+			this.children[1].style.opacity = "0";
+			//this.children[1].style.display = "none";
+		}
+		else {
+			return false;
+		}
+	}
+
+</script>
+
+<script type="text/javascript"> //Подсветка последнего слова в заголовке
 	$(document).ready(function() {
 		$('.title').each(function(index, element) {
 			var heading = $(element);
 			var word_array, last_word, first_part;
 
 			word_array = heading.html().split(/\s+/); // split on spaces
-			last_word = word_array.pop();					// pop the last word
-			first_part = word_array.join(' ');			// rejoin the first words together
+			last_word = word_array.pop();		// pop the last word
+			first_part = word_array.join(' ');	// rejoin the first words together
 
 			heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
 		});

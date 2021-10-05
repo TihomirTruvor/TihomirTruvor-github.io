@@ -99,35 +99,58 @@ li {
 				padding-top: 14px;
 				box-sizing: border-box;
 
-				.label-mobile-menu { /*! Для мобильного меню*/
-						display: none;
-					}
-				.label-mobile-menu:after {/*!Для мобильного меню*/
+	/*!==========Для мобильного меню==========*/
+				#menu__toggle { // скрываем чекбокс
+					opacity: 0;
+				}
+				/* стилизуем кнопку */
+				.menu__btn {
+					display: flex; // используем flex для центрирования содержимого
+					align-items: center;  // центрируем содержимое кнопки
 					position: absolute;
-					content: "\2261";
-					padding: 20px 0;
-					font-size: 90px;
-					line-height: 34px;
-					color: #748943;
+					visibility: hidden;
+					top: 13px;
+					right: 20px;
+					width: 50px;
+					height: 45px;
+					cursor: pointer;
+					z-index: 1;
 				}
-				.label-mobile-menu:hover:after {/*!Для мобильного меню*/
-						color: #9BC414;
+				/* добавляем "гамбургер" */
+				.menu__btn > span,
+				.menu__btn > span::before,
+				.menu__btn > span::after {
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 7px;
+					background-color: #748943;
+					transition-duration: .25s;
 				}
-				.label-mobile-menu:active:after {/*!Для мобильного меню*/
-						color: #9BC414;
+				.menu__btn > span::before {
+					content: '';
+					top: -19px;
+				}
+				.menu__btn > span::after {
+					content: '';
+					top: 19px;
 				}
 
-				#mobile-menu { /*!Для мобильного меню*/
-					display: none;
-					//visibility: hidden;
+				#menu__toggle:checked ~ .menu__btn > span {
+					transform: rotate(45deg);
 				}
-				input[type="checkbox"]:checked ~ .container1 { /*Для мобильного меню*/
+				#menu__toggle:checked ~ .menu__btn > span::before {
+					top: 0;
+					transform: rotate(0);
+				}
+				#menu__toggle:checked ~ .menu__btn > span::after {
+					top: 0;
+					transform: rotate(90deg);
+				}
+				#menu__toggle:checked ~ .container1 {
 					visibility: visible;
 				}
-
-				input[type="checkbox"]:checked ~ .modal-close { /*Для мобильного меню*/
-					visibility: visible;
-				}
+	/*!==========Конец мобильного меню==========*/
 
 				.container1 {
 					display: flex;
@@ -135,24 +158,43 @@ li {
 					-webkit-justify-content: space-between;
 							justify-content: space-between;
 					flex-wrap: wrap;
+					margin-top: 14px;
 					width: 100%;
 					font-size: 14px;
 					
-					li {
+					.nav-item {
+						display: flex;
 						cursor: pointer;
 						position:relative;
 
 						.arrow-mini {
-							fill: #f2a765;
+							display: block;
+							width: 13px;
+							height: 15px;
+							margin: 3px 0px 0px 2px;
+							color: #f2a765;
+							font-size: 27px;
+							line-height: 10px;
+
+							transform: rotate(90deg);
 						}
 
-						.menu {
-							display: none;
+						.arrow-mini::before {
+							content: "\203A";
+						}
+
+						.sub-menu {
 							position:absolute;
+							height: 0; 
+							overflow: hidden; 
 							z-index:1;
 							padding: 0px 5px 5px 5px;
 							background-color: #333333;
+							opacity: 0; 
 							font-size: 13px;
+							transition: all 0.5s ease-in;
+							//transition: all 2s ease;
+
 							li {
 								padding-top: 10px;
 							}
@@ -165,49 +207,11 @@ li {
 							color: #c0d294;
 						}
 
-						.nav-button:hover + .arrow-mini {
-							fill: #c0d294;
+						.nav-button:hover ~ .arrow-mini {
+							color: #c0d294;
 						}
 					}
-					li:hover .menu {
-						display: block;
-					}
 				}
-
-				.modal-close {	
-						visibility: hidden;
-						position: absolute;
-						top: 10px;
-						right: 10px;
-						width: 23px;
-						height: 23px;
-						font-size: 0;
-						background-color: transparent;
-						border: 0;
-						cursor: pointer;
-					}
-
-					.modal-close::before,
-					.modal-close::after
-					{
-						position: absolute;
-						top: 7px;
-						left: 1px;
-						content: "";
-						width: 25px;
-						height: 4px;
-						background-color: #ff5358;
-					}
-
-					.modal-close::before
-					{
-						transform: rotate(45deg);
-					}
-
-					.modal-close::after
-					{
-						transform: rotate(-45deg);
-					}
 			}
 		}
 	}
@@ -260,7 +264,7 @@ li {
 					color: #333333;
 				}
 				.img-search {
-					z-index: 1;
+					//z-index: 1;
 					margin: 5px 0px 0px -19px;
 					fill: #748943;
 				}
