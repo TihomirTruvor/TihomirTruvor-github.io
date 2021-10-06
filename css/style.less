@@ -36,6 +36,22 @@
 	font-size: 30px;
 }
 
+.arrow-min {
+	display: block;
+	width: 13px;
+	height: 15px;
+	margin: 3px 0px 0px 2px;
+	color: #f2a765;
+	font-size: 27px;
+	line-height: 10px;
+
+	transform: rotate(90deg);
+
+	&::before {
+		content: "\203A";
+	}
+}
+
 /*=================VAR======================*/
 @background-black: #333333;
 @var-width: 1200px;
@@ -168,19 +184,7 @@ li {
 						position:relative;
 
 						.arrow-mini {
-							display: block;
-							width: 13px;
-							height: 15px;
-							margin: 3px 0px 0px 2px;
-							color: #f2a765;
-							font-size: 27px;
-							line-height: 10px;
-
-							transform: rotate(90deg);
-						}
-
-						.arrow-mini::before {
-							content: "\203A";
+							.arrow-min;
 						}
 
 						.sub-menu {
@@ -415,6 +419,127 @@ li {
 				a img {
 					max-width: 100%;
 					border-radius: 15px;
+				}
+			}
+		}
+	}
+
+	.statistic {
+		width: 100%;
+		min-height: 290px;
+		margin: 0 auto;
+		margin-top: 40px;
+		text-align: center;
+
+		img { // Временная заглушка 
+			width: 100%;
+		}
+	}
+}
+
+.support {
+	width: 100%;
+	margin-top: 40px;
+	background-color: #333333;
+
+	.container { //@var-width-2: 600px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: @var-width;
+		min-width: @var-min-width;
+		margin: 0 auto;
+		padding: 40px 0px;
+
+		.nav-support {
+			display: flex;
+			flex-direction: column;
+			margin-right: 20px;
+
+			h3 {
+				.h1-title;
+			}
+
+			.nav-support-item {
+				display: flex;
+				font-size: 14px;
+				line-height: 45px;
+				.arrow-mini {
+					.arrow-min;
+					margin: 18px 0 0 2px;
+				}
+
+				a:hover {
+					color: #c0d294;
+				}
+			}
+
+			.nav-support-item a:hover + .arrow-mini {
+				color: #c0d294;
+			}
+
+		}
+
+		.img-support {
+			width: 600px;
+
+			img {
+				width: 100%;
+				border-radius: 3px;
+			}
+		}
+	}
+
+}
+
+.contacts {
+	width: 100%;
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		max-width: @var-width;
+		min-width: @var-min-width;
+		margin: 0 auto;
+		padding: 40px 0px;
+
+		.left-container {
+			width: 600px;
+			div a {
+				color: #333333;
+				font-size: 14px;
+				font-weight: bold;
+			}
+
+			.left {
+				display: flex;
+				align-items: center;
+				.left-item {
+					margin-right: 4px;
+				}
+			}
+			.sale {
+				margin: 20px 0;
+			}
+
+			.chat {
+				width: 590px;
+				height: 300px;
+				margin: 20px 10px 0px 0px;
+			}
+		}
+		.right-container {
+			width: 590px;
+
+			.address {
+				display: flex;
+				align-items: center;
+
+				a {
+					color: #333333;
+					font-size: 14px;
+					font-weight: bold;
+					text-transform: uppercase;
 				}
 			}
 		}

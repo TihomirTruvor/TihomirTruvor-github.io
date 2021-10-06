@@ -17,7 +17,8 @@
 	<title>Greennovo</title>
 </head>
 <body>
-	<header class="main-header"> <!-- Шапка сайта -->
+<!-- Шапка сайта -->
+	<header class="main-header">
 		<div class="top-wrapper">
 			<div class="container">
 				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
@@ -82,7 +83,8 @@
 			</div>
 		</div>
 	</header>
-	<div class="slider"> <!-- Слайдер -->
+<!-- Слайдер -->
+	<div class="slider">
 		<div class="content">
 			<div class="container">
 				<h1>Rear motor <span class="last-word">R-series</span></h1>
@@ -93,7 +95,9 @@
 			</div>
 		</div>
 	</div>
-	<main class="main-content"> <!-- Контент -->
+ <!-- Контент -->
+	<main class="main-content">
+	<!-- Категории -->
 		<section class="categories">
 			<div class="left-container">
 				<div class="product">
@@ -121,10 +125,75 @@
 				</div>
 			</div>
 		</section>
-		<div class="statistic">
-			
-		</div>
+	<!-- Статистика -->
+		<section class="statistic">
+			<img src="img/statistic.jpg"> <!-- Временная заглушка -->
+		</section>
 	</main>
+<!-- Поддержка -->
+	<section class="support">
+		<div class="container">
+			<div class="nav-support">
+				<h3>Support&Service</h3>
+				<div class="nav-support-item">
+					<a href="#">Global Service /Russia Center</a>
+					<div class="arrow-mini"></div>
+				</div>
+				<div class="nav-support-item">
+					<a href="#">After-Sale Service</a>
+					<div class="arrow-mini"></div>
+				</div>
+				<div class="nav-support-item">
+					<a href="#">Technology Support</a>
+					<div class="arrow-mini"></div>
+				</div>
+				<div class="nav-support-item">
+					<a href="#">Service Concep</a>
+					<div class="arrow-mini"></div>
+				</div>
+			</div>
+			<div class="img-support">
+				<img src="img/support.jpg">
+			</div>
+		</div>
+	</section>
+<!-- Контакты -->
+	<section class="contacts">
+		<div class="content">
+			<div class="left-container">
+				<div class="left phone">
+					<img class="left-item icon-phone" src="img/icon-phone.svg" width="40" height="40">
+					<a href="tel:00(86)13632527554">00(86)13632527554</a>
+				</div>
+				<div class="left sale">
+					<img class="left-item icon-sale" src="img/icon-handshake.svg" width="40" height="40">
+					<a href="mailto:sales@greentest.cn">sales@greentest.cn</a>
+				</div>
+				<div class="left info">
+					<img class="left-item icon-sale" src="img/icon-headset.svg" width="40" height="40">
+					<a href="mailto:info@greentest.cn">info@greentest.cn</a>
+				</div>
+			<textarea class="chat">You want to know something?
+	
+			</textarea>
+			<!--<input type="chat" name="Chat" class="main-chat" placeholder="You want to know something?">-->
+
+			</div>
+
+			<div class="right-container">
+				<div class="address">
+					<img class="icon-address" src="img/map-marker.svg" width="40" height="40">
+					<a href="https://goo.gl/maps/whH5pZ2GdX3cse917" target="_blank">17G,PHASE II,SHUIWAN 1979,
+CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a> 
+				</div>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3686.3840307600894!2d113.91628141495802!3d22.489770285225376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s17G%2CPHASE%20II%2CSHUIWAN%201979%2C%20CHINA%20MERCHANTS%20STREET%2CNANSHAN%20DISTRICT%2CSHENZHEN!5e0!3m2!1sru!2sru!4v1633532019425!5m2!1sru!2sru" width="590" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</div>
+
+		
+	</section>
 
 
 <!-- СКРИПТЫ -->
@@ -137,7 +206,7 @@
 		el[i].addEventListener("mouseleave", hideSub, false);
 	}
 
-	function showSub(e) {
+	function showSub(e) { // Отображение подменю
 		if(this.children.length>1) {
 			this.children[1].style.height = "auto";
 			this.children[1].style.overflow = "visible";
@@ -148,7 +217,7 @@
 		}
 	}
 
-	function hideSub(e) {
+	function hideSub(e) { // Скрытие подменю
 		if(this.children.length>1) {
 			this.children[1].style.height = "0px";
 			this.children[1].style.overflow = "hidden";
@@ -159,7 +228,6 @@
 			return false;
 		}
 	}
-
 </script>
 
 <script type="text/javascript"> //Подсветка последнего слова в заголовке
@@ -168,9 +236,9 @@
 			var heading = $(element);
 			var word_array, last_word, first_part;
 
-			word_array = heading.html().split(/\s+/); // split on spaces
-			last_word = word_array.pop();		// pop the last word
-			first_part = word_array.join(' ');	// rejoin the first words together
+			word_array = heading.html().split(/\s+/); //split on spaces
+			last_word = word_array.pop(); //pop the last word
+			first_part = word_array.join(' '); //rejoin the first words together
 
 			heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
 		});
