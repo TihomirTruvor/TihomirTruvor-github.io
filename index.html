@@ -54,7 +54,7 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#Sup">Support&Service</a>
+						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
 							<ul class="sub-menu">
 								<li><a href="#">Global Service /Russia Center</a></li>
 								<li><a href="#">Service Concep</a></li>
@@ -88,7 +88,7 @@
 		<div class="content">
 			<div class="container">
 				<h1>Rear motor <span class="last-word">R-series</span></h1>
-				<span>R-series are in High Power,Low noise and High Efficiency.
+				<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
 						All with compact design to get higher Torque.
 				</span>
 				<a class="slider-button" href="#">More details</a>
@@ -99,7 +99,7 @@
  <!-- Контент -->
 	<main class="main-content">
 	<!-- Категории -->
-		<section class="categories">
+		<section class="categories" height="800">
 			<div class="left-container">
 				<div class="product">
 					<a href="#"><img src="img/product.jpg" width="590">
@@ -132,7 +132,7 @@
 		</section>
 	</main>
 <!-- Поддержка -->
-	<section class="support" id="Sup">
+	<section class="support">
 		<div class="container">
 			<div class="nav-support">
 				<h3>Support&Service</h3>
@@ -224,6 +224,8 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 				 Greennovo Science & Technology Co., LTD</p>
 		</div>
 	</footer>
+<!-- Стрелка наверх -->
+	<a class="back-to-top" title="Наверх">↑</a>
 
 
 <!-- СКРИПТЫ -->
@@ -258,6 +260,36 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 			return false;
 		}
 	}
+</script>
+
+<script type="text/javascript"> // Кнопка наверх
+(function() {
+	'use strict';
+
+	function trackScroll() {
+		var scrolled = window.pageYOffset;
+		var coords = document.documentElement.clientHeight;
+
+		if (scrolled > coords) {
+			goTopBtn.classList.add('back-to-top-show');
+		}
+		if (scrolled < coords) {
+			goTopBtn.classList.remove('back-to-top-show');
+		}
+	}
+
+	function backToTop() {
+		if (window.pageYOffset > 0) {
+			window.scrollBy(0, -80);
+			setTimeout(backToTop, 10);
+		}
+	}
+
+	var goTopBtn = document.querySelector('.back-to-top');
+
+	window.addEventListener('scroll', trackScroll);
+	goTopBtn.addEventListener('click', backToTop);
+})();
 </script>
 
 <script type="text/javascript"> //Подсветка последнего слова в заголовке
