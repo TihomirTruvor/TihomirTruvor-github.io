@@ -71,15 +71,17 @@
 		<div class="bottom-wrapper">
 			<div class="container">
 				<div class="language">
-					<!--<img class="lang-img" src="img/lang.gif" width="25" height="25"> -->
-					<a href="">English</a>
+					<a href="#">English</a>
 				</div>
+<!-- Поиск -->
 				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
 					<input type="search" name="Search" class="main-search" placeholder="Site search">
-					<svg class="img-search" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
-						<path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
-					</svg>
+
+					<input type="submit" value=" " class="search-button" title="Go search" width="20" height="20">
 				</form>
+<!-- Мобильный поиск -->
+					<input type="button" class="mobile-search-button" title="Mobile search" width="50" height="50">	
+					<input type="button" class="mobile-close-search" title="Закрыть поиск">
 			</div>
 		</div>
 	</header>
@@ -229,6 +231,27 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 
 
 <!-- СКРИПТЫ -->
+
+<!--Подключение библиотеки jQuery-->
+	<script src="https://thecode.media/wp-content/uploads/2019/06/jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	// функция показать поиск
+	document.querySelector('.mobile-search-button').onclick = function() {
+		
+		let searchContent = document.querySelector('.search');
+		searchContent.style.display = 'flex'; // Открываем поле ввода
+
+		document.querySelector('.mobile-close-search').style.display = 'block'; // Открываем кнопку закрытия поиска
+
+		document.querySelector('.mobile-close-search').onclick = function(){ // Закрываем поле ввода
+			if (searchContent.style.display = 'block') {
+				searchContent.style.display = 'none';
+				document.querySelector('.mobile-close-search').style.display = 'none';
+			}
+		}
+	};
+</script>
 
 <script type="text/javascript"> // Меню
 	var el = document.getElementsByClassName('nav-item');

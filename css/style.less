@@ -230,10 +230,12 @@ li {
 	.bottom-wrapper {
 			margin-top: 86px;
 		.container {
+
 			display: flex;
 			flex-direction: row;
 			-webkit-justify-content: space-between;
 					justify-content: space-between;
+			align-items: center;
 			max-width: @var-width;
 			margin: 0 auto;
 			padding: @var-padding-width;
@@ -264,6 +266,7 @@ li {
 			.search {
 				position: relative;
 				display: flex;
+				align-items: center;
 				width: 50%;
 
 				.main-search {
@@ -274,15 +277,60 @@ li {
 					font-size: 14px;
 					color: #333333;
 				}
-				.img-search {
-					//z-index: 1;
-					margin: 5px 0px 0px -19px;
-					fill: #748943;
+				.search-button {
+					width: 20px;
+					//height: 100%;
+					margin: 0 0 0 2px;
+					box-sizing: border-box;
+					border: none;
+					outline: none;
+					background-color: transparent;
+					background-image: url(../img/icon-search.svg);
+					background-size: contain;
+					background-repeat: no-repeat;
+					cursor: pointer;
 				}
 			}
-		}	
+		}
 	}
 }
+/*!=================MOBILE-SEARCH======================*/
+.mobile-search-button {
+	position: fixed;
+	display: none;
+	left: 48%;
+	top: 18px;
+	z-index: 6;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	background-image: url(../img/icon-search-mobile.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.mobile-close-search {
+	//visibility: hidden;
+	display: none;
+	//position: absolute;
+	//top: 96px;
+	//right: 540px;
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url(../img/icon-close.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+}
+
+
 
 /*!=================SLIDER======================*/
 .slider {

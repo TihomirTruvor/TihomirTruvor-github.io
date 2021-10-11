@@ -165,7 +165,7 @@
 }
 
 /*!==============Для мобильных_1=============*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (min-width: 480px){
 	body {
 			width: 767px;
 
@@ -239,19 +239,31 @@
 			.bottom-wrapper {
 
 				.container {
+					height: 30px;
 
 					.language {
+						display: none;
 						margin: 0 20px 0 0;
 					}
 
 					.search {
-						//margin-right: 15px;
+						display: none;
+						width: 100%;
 
 						.main-search {
-							width: 520px;
-							font-size: 16px;
+							width: 100%;
+							font-size: 20px;
 							font-weight: bold;
 						}
+
+						.search-button {
+							width: 30px;
+							height: 30px;
+						}
+					}
+
+					.mobile-search-button {
+						display: block;
 					}
 				}
 			}
