@@ -75,7 +75,7 @@
 				</div>
 <!-- Поиск -->
 				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
-					<input type="search" name="Search" class="main-search" placeholder="Site search">
+					<input type="search" name="Search" class="main-search" placeholder="Search">
 
 					<input type="submit" value=" " class="search-button" title="Go search" width="20" height="20">
 				</form>
@@ -97,6 +97,7 @@
 			</div>
 		</div>
 		<img class="back-image" src="img/slider-img.jpg">
+		<img class="mobile-back-image" src="img/mobile-slider-img.jpg">
 	</div>
  <!-- Контент -->
 	<main class="main-content">
@@ -104,7 +105,9 @@
 		<section class="categories" height="800">
 			<div class="left-container">
 				<div class="product">
-					<a href="#"><img src="img/product.jpg" width="590">
+					<a href="#">
+						<img class="img-product" src="img/product.jpg">
+						<img class="mobile-img-product" src="img/mobile-product.jpg">
 						<div class="h2-content">
 							<h2>Product Center</h2>
 						</div>
@@ -113,14 +116,18 @@
 			</div>
 			<div class="right-container">
 				<div class="innovation">
-					<a href="#"><img src="img/innovation.jpg">
+					<a href="#">
+						<img class="img-innovation" src="img/innovation.jpg">
+						<img class="mobile-img-innovation" src="img/mobile-innovation.jpg">
 						<div class="h2-content">
 							<h2>R&D Innovation</h2>
 						</div>
 					</a>
 				</div>
 				<div class="about-greennovo">
-					<a href="#"><img src="img/about.jpg">
+					<a href="#">
+						<img class="img-about" src="img/about.jpg">
+						<img class="mobile-img-about" src="img/mobile-about.jpg">
 						<div class="h2-content">
 							<h2>Greennovo</h2>
 						</div>
@@ -242,12 +249,15 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 		let searchContent = document.querySelector('.search');
 		searchContent.style.display = 'flex'; // Открываем поле ввода
 
+		document.querySelector('.mobile-search-button').style.display = 'none'; //Скрываем кнопку поиска
+
 		document.querySelector('.mobile-close-search').style.display = 'block'; // Открываем кнопку закрытия поиска
 
 		document.querySelector('.mobile-close-search').onclick = function(){ // Закрываем поле ввода
 			if (searchContent.style.display = 'block') {
 				searchContent.style.display = 'none';
 				document.querySelector('.mobile-close-search').style.display = 'none';
+				document.querySelector('.mobile-search-button').style.display = 'block'; //Открываем кнопку поиска
 			}
 		}
 	};

@@ -239,7 +239,14 @@
 			.bottom-wrapper {
 
 				.container {
+					position: fixed;
+					//display: none;
+					z-index: 8;
+					top: 86px;
+					width: 96%;
 					height: 30px;
+					padding-top: 15px;
+					//padding-bottom: 8px;
 
 					.language {
 						display: none;
@@ -252,13 +259,13 @@
 
 						.main-search {
 							width: 100%;
-							font-size: 20px;
+							font-size: 30px;
 							font-weight: bold;
 						}
 
 						.search-button {
-							width: 30px;
-							height: 30px;
+							width: 50px;
+							height: 50px;
 						}
 					}
 
@@ -267,6 +274,375 @@
 					}
 				}
 			}
+		}
+
+		.mobile-close-search {
+			width: 50px;
+			height: 50px;
+		}
+		.slider {
+			
+			.back-image {
+				display: none;
+			}
+
+			.mobile-back-image {
+				display: block;
+				width: 100%;
+			}
+
+			.content {
+
+				width: 100%;
+				height: 30%;
+				top: 70%;
+
+				.container {
+					max-width: 600px;
+					padding: 0;
+
+					h1 {
+						font-size: 50px;
+
+						span {
+							font-size: 50px;
+						}
+					}
+
+					.slider-text {
+						display: none;
+					}
+
+					.slider-button {
+						font-size: 35px;
+						text-transform: uppercase;
+					}
+				}
+			} 
+		}
+
+		.main-content {
+			padding: 0;
+			.categories {
+				flex-direction: column;
+				align-items: center;
+				.left-container {
+					width: 100%;
+					margin-right: 0;
+
+					.product {
+						border-radius: 0;
+						a {
+
+						
+							.h2-content {
+								top: 38%;
+
+								h2 {
+								font-size: 50px;
+								}
+							}
+						}
+
+						.img-product {
+							display: none;
+						}
+
+						.mobile-img-product {
+							display: block;
+							border-radius: 0;
+						}
+					}
+				}
+				
+
+				.right-container {
+					width: 100%;
+
+					.about-greennovo {
+
+					}
+
+					.innovation,
+					.about-greennovo {
+						border-radius: 0;
+
+						a {
+
+							.h2-content {
+
+								top: 38%;
+
+								h2 {
+								font-size: 50px;
+								}
+							}
+						}
+
+						.img-innovation,
+						.img-about {
+							display: none;
+						}
+
+						.mobile-img-innovation,
+						.mobile-img-about {
+							display: block;
+							border-radius: 0;
+						}
+					}
+					.innovation {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+
+		.back-to-top {
+			width: 100%;
+			height: 70px;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 479px) {
+	body {
+			width: 479px;
+
+		.main-header {
+			width: 100%;
+
+			.top-wrapper {
+
+				.container {
+					padding: 8px 0px 7px 0px;
+					
+					.header-logo {
+						margin-left: 15px;
+					}
+
+					.navigation {
+						position: relative;
+
+						.menu__btn {
+							visibility: visible;
+						}
+						.container1 {
+							visibility: hidden;
+							position: absolute;
+							flex-direction: column;
+							width: 479px;
+							padding-top: 0px;
+							margin-top: 0px;
+							top: 70px;
+							right: 0px;
+							text-align: left;
+							font-size: 23px;
+							font-weight: bold;
+							letter-spacing: 1px;
+							text-transform: uppercase;
+							background-color: #333333;
+							z-index: 1;
+							//transition-duration: .25s;
+
+							.nav-item {
+								width: 245px;
+								margin-left: 110px;
+								padding: 15px 0px;
+								.arrow-mini {
+									//display: none;
+									margin: 6px 0 0 6px;
+									transform: rotate(0deg);
+								}
+
+								.sub-menu {
+									position: absolute;
+									top: 15px;
+									left: 100%;
+									width: 270px;
+									margin-top: 0;
+									z-index: 1;
+									font-size: 14px;
+									background-color: transparent;
+									transition: all 1s ease-in;
+
+									li {
+										padding-top: 5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.bottom-wrapper {
+
+				.container {
+					position: fixed;
+					//display: none;
+					z-index: 8;
+					top: 86px;
+					width: 96%;
+					height: 30px;
+					padding-top: 15px;
+					//padding-bottom: 8px;
+
+					.language {
+						display: none;
+						margin: 0 20px 0 0;
+					}
+
+					.search {
+						display: none;
+						width: 100%;
+
+						.main-search {
+							width: 100%;
+							font-size: 30px;
+							font-weight: bold;
+						}
+
+						.search-button {
+							width: 50px;
+							height: 50px;
+						}
+					}
+
+					.mobile-search-button {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.mobile-close-search {
+			width: 50px;
+			height: 50px;
+		}
+		.slider {
+			
+			.back-image {
+				display: none;
+			}
+
+			.mobile-back-image {
+				display: block;
+				width: 100%;
+			}
+
+			.content {
+
+				width: 100%;
+				height: 30%;
+				top: 70%;
+
+				.container {
+					max-width: 600px;
+					padding: 0;
+
+					h1 {
+						font-size: 50px;
+
+						span {
+							font-size: 50px;
+						}
+					}
+
+					.slider-text {
+						display: none;
+					}
+
+					.slider-button {
+						font-size: 35px;
+						text-transform: uppercase;
+					}
+				}
+			} 
+		}
+
+		.main-content {
+			padding: 0;
+			.categories {
+				flex-direction: column;
+				align-items: center;
+				.left-container {
+					width: 100%;
+					margin-right: 0;
+
+					.product {
+						border-radius: 0;
+						a {
+
+						
+							.h2-content {
+								top: 38%;
+
+								h2 {
+								font-size: 50px;
+								}
+							}
+						}
+
+						.img-product {
+							display: none;
+						}
+
+						.mobile-img-product {
+							display: block;
+							border-radius: 0;
+						}
+					}
+				}
+				
+
+				.right-container {
+					width: 100%;
+
+					.about-greennovo {
+
+					}
+
+					.innovation,
+					.about-greennovo {
+						border-radius: 0;
+
+						a {
+
+							.h2-content {
+
+								top: 38%;
+
+								h2 {
+								font-size: 50px;
+								}
+							}
+						}
+
+						.img-innovation,
+						.img-about {
+							display: none;
+						}
+
+						.mobile-img-innovation,
+						.mobile-img-about {
+							display: block;
+							border-radius: 0;
+						}
+					}
+					.innovation {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+
+		.back-to-top {
+			width: 100%;
+			height: 70px;
+			right: 0;
+			bottom: 0;
 		}
 	}
 }
