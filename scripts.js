@@ -90,3 +90,16 @@
 			heading.html([first_part, ' <span class="last-word">', last_word, '</span>'].join(''));
 		});
 	});
+
+	$(document).ready(function() {
+		PopUpHide();
+	});
+
+	function PopUpShow(){
+		$("#popup-gs").show();
+		$("#popup-as").show();
+	}
+	function PopUpHide(){
+		$("#popup-gs").hide();
+		$("#popup-as").hide();
+	}
