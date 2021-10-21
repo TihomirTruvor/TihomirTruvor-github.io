@@ -91,8 +91,4 @@
 		});
 	});
 
-	/*jQuery(document).on("click",".sub-menu-item", function(){
-
-	Query(".sub-menu-item").closest(".nav-item");
-});*/
 
