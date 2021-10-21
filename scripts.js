@@ -41,7 +41,7 @@
 			this.children[1].style.height = "0px";
 			this.children[1].style.overflow = "hidden";
 			this.children[1].style.opacity = "0";
-			//this.children[1].style.display = "none";
+			this.children[1].style.display = "none";
 		}
 		else {
 			return false;
@@ -91,15 +91,8 @@
 		});
 	});
 
-	$(document).ready(function() {
-		PopUpHide();
-	});
+	/*jQuery(document).on("click",".sub-menu-item", function(){
 
-	function PopUpShow(){
-		$("#popup-gs").show();
-		$("#popup-as").show();
-	}
-	function PopUpHide(){
-		$("#popup-gs").hide();
-		$("#popup-as").hide();
-	}
+	Query(".sub-menu-item").closest(".nav-item");
+});*/
+

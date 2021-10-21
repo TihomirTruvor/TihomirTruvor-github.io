@@ -314,11 +314,7 @@ li {
 }
 
 .mobile-close-search {
-	//visibility: hidden;
 	display: none;
-	//position: absolute;
-	//top: 96px;
-	//right: 540px;
 	width: 30px;
 	height: 30px;
 	background-color: transparent;
@@ -551,14 +547,15 @@ li {
 				}
 
 				.popup {
+					display: none;
 					width: 100%;
 					height:100%;
-					overflow:hidden;
+					//overflow:hidden;
 					position:fixed;
 					background-color: rgba(255,255,255,0.9);
 					top:86px;
 					left: 0;
-					z-index: 6;
+					z-index: 7;
 					color: #333333;
 
 					.popup-content {
@@ -640,8 +637,13 @@ li {
 							text-align: justify;
 							padding: 0 40px;
 						}
-
 					}
+				}
+				#popup-gs:target,
+				#popup-as:target,
+				#popup-ts:target,
+				#popup-sc:target {
+					display: block;
 				}
 			}
 
@@ -660,7 +662,6 @@ li {
 			}
 		}
 	}
-
 }
 
 .contacts {
