@@ -6,84 +6,20 @@
 	<header class="main-header">
 		<div class="top-wrapper">
 			<div class="container">
-				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
-					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
-				</a>
-				<nav class="navigation">
-
-					<input id="menu__toggle" type="checkbox" /><!--Для мобильного меню-->
-					<label class="menu__btn" for="menu__toggle"><!--Для мобильного меню-->
-						<span></span>
-					</label>
-
-					<div class="container1">
-						<div class="nav-item">
-							<a class="nav-button" href="#">About Greennovo</a>
-						</div>
-						<div class="nav-item">
-							<a class="nav-button" href="#">Product Center</a>
-							<ul class="sub-menu">
-								<li><a href="#">Greennovo Motor</a></li>
-								<li><a href="#">Battery</a></li>
-								<li><a href="#">Display</a></li>
-								<li><a href="#">Controller</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
-							<ul class="sub-menu">
-								<li><a href="#">Innovation Idea</a></li>
-								<li><a href="#">Qualification Certificates</a></li>
-								<li><a href="#">Test Laboratory</a></li>
-								<li><a href="#">Manufacturing Base</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
-							<ul class="sub-menu">
-								<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
-								<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
-								<li class="sub-menu-item"><a href="#popup-as">After-Sale Service</a></li>
-								<li class="sub-menu-item"><a href="#popup-ts">Technology Support</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#Cont">Contact Us</a></div>
-					</div>
-				</nav>
+				[[$logo]]
+				[[$navigation]]
 			</div>
 		</div>
 		<div class="bottom-wrapper">
 			<div class="container">
-				<div class="language">
-					<a href="#">English</a>
-				</div>
+				[[$lang]]
 <!-- Поиск -->
-				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
-					<input type="search" name="Search" class="main-search" placeholder="Search">
-
-					<input type="submit" value=" " class="search-button" title="Go search">
-				</form>
-<!-- Мобильный поиск -->
-					<input type="button" value=" " class="mobile-search-button" title="Mobile search">	
-					<input type="button" value=" " class="mobile-close-search" title="Закрыть поиск">
+				[[$search]]
 			</div>
 		</div>
 	</header>
 <!-- Слайдер -->
-	<div class="slider">
-		<div class="content">
-			<div class="container">
-				<h1>Rear motor <span class="last-word">R-series</span></h1>
-				<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
-						All with compact design to get higher Torque.
-				</span>
-				<a class="slider-button" href="#">More details</a>
-			</div>
-		</div>
-		<img class="back-image" src="img/slider-img.jpg" alt="фон 1 слайдера">
-		<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
-	</div>
+	[[$slider]]
 
 <!-- Swiper Slider main container
 	<div class="swiper">
@@ -101,255 +37,34 @@
  <!-- Контент -->
 	<main class="main-content">
 	<!-- Категории -->
-		<section class="categories">
-			<div class="left-container">
-				<div class="product">
-					<a href="#">
-						<img class="img-product" src="img/product.jpg" alt="Фон категории товаров">
-						<img class="mobile-img-product" src="img/mobile-product.jpg" alt="Мобильный фон категории товаров">
-						<div class="h2-content">
-							<h2>Product Center</h2>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="right-container">
-				<div class="innovation">
-					<a href="#">
-						<img class="img-innovation" src="img/innovation.jpg" alt="Фон категории инновации">
-						<img class="mobile-img-innovation" src="img/mobile-innovation.jpg" alt="Мобильный фон категории инновации">
-						<div class="h2-content">
-							<h2>R&D Innovation</h2>
-						</div>
-					</a>
-				</div>
-				<div class="about-greennovo">
-					<a href="#">
-						<img class="img-about" src="img/about.jpg" alt="Фон категории О компании">
-						<img class="mobile-img-about" src="img/mobile-about.jpg" alt="Мобильный фон категории О компании">
-						<div class="h2-content">
-							<h2>Greennovo</h2>
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
+		[[$categories]]
 	<!-- Статистика -->
-		<section class="statistic" id="Stat">
-			<img src="img/statistic.jpg" alt="Фон статистики"> <!-- Временная заглушка -->
-		</section>
+		[[$statistic]]
 	</main>
 <!-- Поддержка -->
 	<section class="support">
 		<div class="container">
-			<div class="nav-support" id="nav-support-id">
-				<h3>Support&Service</h3>
-				<div class="nav-support-item">
-					<a href="#popup-gs">Global Service /Russia Center</a>
-					<div class="popup" id="popup-gs">
-						<div class="popup-content">
-							<div class="popup-top">
-								<div class="popup-header">
-									<h4>Global Service /Russia Center</h4>
-								</div>
-									<a href="#nav-support-id">
-										<div class="cl-btn-2">
-											<div>
-												<div class="leftright"></div>
-												<div class="rightleft"></div>
-											</div>
-										</div> 
-									</a>
-							</div>
-							<p class="popup-text">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Consequuntur sed cupiditate dolorem in laboriosam maiores excepturi, nobis facere, illum ullam sit atque odio, quae nostrum voluptatibus inventore eius saepe. Qui? Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Accusamus saepe ipsam illum molestias ad autem ipsa aperiam quaerat quos a quis non vero voluptate nostrum fugiat reiciendis, soluta, pariatur repellat.</p>
-						</div>
-					</div>
-					<div class="arrow-mini"></div>
-				</div>
-				<div class="nav-support-item">
-					<a href="#popup-as">After-Sale Service</a>
-					<div class="popup" id="popup-as">
-						<div class="popup-content">
-							<div class="popup-top">
-								<div class="popup-header">
-									<h4>After-Sale Service</h4>
-								</div>
-									<a href="#nav-support-id">
-										<div class="cl-btn-2">
-											<div>
-												<div class="leftright"></div>
-												<div class="rightleft"></div>
-											</div>
-										</div> 
-									</a>
-							</div>
-							<p class="popup-text">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Consequuntur sed cupiditate dolorem in laboriosam maiores excepturi, nobis facere, illum ullam sit atque odio, quae nostrum voluptatibus inventore eius saepe. Qui? Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Accusamus saepe ipsam illum molestias ad autem ipsa aperiam quaerat quos a quis non vero voluptate nostrum fugiat reiciendis, soluta, pariatur repellat.</p>
-						</div>
-					</div>
-					<div class="arrow-mini"></div>
-				</div>
-				<div class="nav-support-item">
-					<a href="#popup-ts">Technology Support</a>
-					<div class="popup" id="popup-ts">
-						<div class="popup-content">
-							<div class="popup-top">
-								<div class="popup-header">
-									<h4>Technology Support</h4>
-								</div>
-									<a href="#nav-support-id">
-										<div class="cl-btn-2">
-											<div>
-												<div class="leftright"></div>
-												<div class="rightleft"></div>
-											</div>
-										</div> 
-									</a>
-							</div>
-							<p class="popup-text">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Consequuntur sed cupiditate dolorem in laboriosam maiores excepturi, nobis facere, illum ullam sit atque odio, quae nostrum voluptatibus inventore eius saepe. Qui? Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Accusamus saepe ipsam illum molestias ad autem ipsa aperiam quaerat quos a quis non vero voluptate nostrum fugiat reiciendis, soluta, pariatur repellat.</p>
-						</div>
-					</div>
-					<div class="arrow-mini"></div>
-				</div>
-				<div class="nav-support-item">
-					<a href="#popup-sc">Service Concep</a>
-					<div class="popup" id="popup-sc">
-						<div class="popup-content">
-							<div class="popup-top">
-								<div class="popup-header">
-									<h4>Service Concep</h4>
-								</div>
-									<a href="#nav-support-id">
-										<div class="cl-btn-2">
-											<div>
-												<div class="leftright"></div>
-												<div class="rightleft"></div>
-											</div>
-										</div> 
-									</a>
-							</div>
-							<p class="popup-text">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Consequuntur sed cupiditate dolorem in laboriosam maiores excepturi, nobis facere, illum ullam sit atque odio, quae nostrum voluptatibus inventore eius saepe. Qui? Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Accusamus saepe ipsam illum molestias ad autem ipsa aperiam quaerat quos a quis non vero voluptate nostrum fugiat reiciendis, soluta, pariatur repellat.</p>
-						</div>
-					</div>
-					<div class="arrow-mini"></div>
-				</div>
-			</div>
-			<div class="img-support">
-				<img src="img/support.jpg" alt="Картинка блока поддержки">
-			</div>
+			[[$support]]
 		</div>
 	</section>
 <!-- Контакты -->
 	<section class="contacts" id="Cont">
 		<div class="content">
-			<div class="left-container">
-				<div class="left phone">
-					<a href="tel:00(86)13632527554"><img class="left-item icon-phone" src="img/icon-phone.svg" alt="иконка телефона" width="40" height="40">00(86)13632527554</a>
-				</div>
-				<div class="left sale">
-					<a href="mailto:sales@greentest.cn"><img class="left-item icon-sale" src="img/icon-handshake.svg" alt="иконка e-mail" width="40" height="40">sales@greentest.cn</a>
-				</div>
-				<div class="left info">
-					<a href="mailto:info@greentest.cn"><img class="left-item icon-sale" src="img/icon-headset.svg" alt="иконка e-mail 2" width="40" height="40">info@greentest.cn</a>
-				</div>
-				<div class="chat">
-					<textarea class="text-chat">You want to know something?</textarea>
-					<button class="submit-chat">Send</button>
-				</div>
-			<!--<input type="chat" name="Chat" class="main-chat" placeholder="You want to know something?">-->
-			</div>
+			[[$left-contacts]]
 
-			<div class="right-container">
-				<div class="address">
-					<img class="icon-address" src="img/map-marker.svg" alt="иконка указателя на карте" width="40" height="40">
-					<a href="https://goo.gl/maps/whH5pZ2GdX3cse917" target="_blank">17G,PHASE II,SHUIWAN 1979,
-CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a> 
-				</div>
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3686.3840307600894!2d113.91628141495802!3d22.489770285225376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s17G%2CPHASE%20II%2CSHUIWAN%201979%2C%20CHINA%20MERCHANTS%20STREET%2CNANSHAN%20DISTRICT%2CSHENZHEN!5e0!3m2!1sru!2sru!4v1633532019425!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
-				</div>
-			</div>
+			[[$right-contacts]]
 		</div>
 	</section>
 <!-- Футер -->
 	<footer class="footer">
-		<div class="footer-top-wrapper">
-			<div class="container">
-				<ul class="list-1">
-					<li><a href="#">About Greennovo</a></li>
-					<li><a href="#">R&D Innovation</a></li>
-					<li><a href="#Stat">Statistics</a></li>
-					<li><a href="#Sup">Support&Service</a></li>
-				</ul>
-				<ul class="list-2">
-					<li class="list-2-item"><a href="#">Rear Motor R-Series</a></li>
-					<li class="list-2-item"><a href="#">Front Motor F-Series</a></li>
-					<li class="list-2-item"><a href="#">Battery</a></li>
-					<li class="list-2-item"><a href="#">Display</a></li>
-					<li class="list-2-item"><a href="#">Controller</a></li>
-					<li class="mob-list-2-prod"><a href="#">Product center</a></li>
-				</ul>
-				<ul class="soc-1">
-					<li><a href="https://msngr.link/wc/79871170012" target="_blank"><img src="img/icon-weechat.svg" alt="иконка Вичата">WeChat: lihaistas</a></li>
-					<li><a href="https://api.whatsapp.com/send?phone=8613632527554" target="_blank"><img src="img/icon-whatsapp.svg" alt="иконка WhatsApp">WhatsApp: +8613632527554</a></li>
-				</ul>
-				<ul class="soc-2">
-					<li><a href="https://www.facebook.com/greentest.official" target="_blank"><img src="img/icon-facebook.svg" alt="иконка Facebook">Facebook</a></li>
-					<li><a href="https://www.youtube.com/channel/UCisopLJJey-qrG2k5Qy3iAg" target="_blank"><img src="img/icon-youtube.svg" alt="иконка YouTube">You Tube</a></li>
-					<li><a href="https://www.instagram.com/greentest.official" target="_blank"><img src="img/icon-instagram.svg" alt="иконка Instagram">Instagram</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer-bottom-wrapper">
-			<p class="footer-text">&#169; <!-- Знак копирайта-->
-				<script>document.write(new Date().getFullYear());</script><!-- Автоизменение года-->
-				 Greennovo Science & Technology Co., LTD</p>
-		</div>
+		[[$top-footer]]
+		[[$bottom-footer]]
 	</footer>
 
 <!-- Стрелка наверх -->
-	<a class="back-to-top" title="Наверх">
-		<img src="img/angle-up.svg" alt="иконка Наверх">
-	</a>
+	[[$arrow-top]]
 
-<!--Подключение библиотеки jQuery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-<!-- СКРИПТЫ -->
-<script src="scripts.js"></script>
-
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!-- Свайпер -->
-
-<script type="text/javascript">
-	//Свайпер
-const swiper = new Swiper('.swiper', {
-	autoplay: {
-		delay: 2500,
-		disableOnInteraction: false, //остановка после ручной прокрутки
-	},
-
-	loop: true, //бесконечная прокрутка
-
-	speed: 900, //скорость
-
-	keyboard: { //управление с клавы
-		enabled: true,
-		onlyInViewport: true,
-		pageUpDown: true,
-	},
-
-	autoHeight: true, //автовысота
-
-	//grabCursor: true,
-	//slideToClickedSlide: true,
-
-	lazy: { // постепенная загрузка картинок
-		loadOnTransitionStart: false,
-		loadPrevNext: false,
-	}
-
-	//parallax: true,
-});
-</script>
+	[[$scripts]]
 
 </body>
 </html>
