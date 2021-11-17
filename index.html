@@ -103,18 +103,18 @@
 		<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
 	</div>
 
-<!-- Swiper Slider main container -->
-<div class="swiper">
-	<!-- Additional required wrapper -->
-	<div class="swiper-wrapper">
-		
-		<!-- Slides -->
-		<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img.jpg" alt="фон 1 слайдера"></div>
-		
-		<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img2.jpg" alt="фон 2 слайдера"></div>
+<!-- Swiper Slider main container
+	<div class="swiper">
+		<!-- Additional required wrapper
+		<div class="swiper-wrapper">
+			
+			<!-- Slides
+			<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img.jpg" alt="фон 1 слайдера"></div>
+			
+			<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img2.jpg" alt="фон 2 слайдера"></div>
 
-	</div>
-</div>
+		</div>
+	</div> -->
 
  <!-- Контент -->
 	<main class="main-content">
@@ -338,7 +338,6 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!-- Свайпер -->
 
 <script type="text/javascript">
-	
 	//Свайпер
 const swiper = new Swiper('.swiper', {
 	autoplay: {
@@ -365,8 +364,9 @@ const swiper = new Swiper('.swiper', {
 		loadOnTransitionStart: false,
 		loadPrevNext: false,
 	}
-});
 
+	//parallax: true,
+});
 </script>
 
 </body>
