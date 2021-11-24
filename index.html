@@ -48,7 +48,7 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
+						<div class="nav-item"><div class="nav-button">R&D Innovation</div>
 							<ul class="sub-menu">
 								<li><a href="#">Innovation Idea</a></li>
 								<li><a href="#">Qualification Certificates</a></li>
@@ -57,7 +57,7 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
+						<div class="nav-item"><a class="nav-button" href="#Support">Support&Service</a>
 							<ul class="sub-menu">
 								<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
 								<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
@@ -83,10 +83,8 @@
 					<input type="submit" value=" " class="search-button" title="Go search">
 				</form>
 <!-- Мобильный поиск -->
-				<div>
 					<input type="button" value=" " class="mobile-search-button" title="Mobile search">	
 					<input type="button" value=" " class="mobile-close-search" title="Закрыть поиск">
-				</div>
 			</div>
 		</div>
 	</header>
@@ -160,7 +158,7 @@
 		</section>
 	</main>
 <!-- Поддержка -->
-	<section class="support">
+	<section class="support" id="Support">
 		<div class="container">
 			<div class="nav-support" id="nav-support-id">
 				<h3>Support&Service</h3>
@@ -271,11 +269,20 @@
 				<div class="left info">
 					<a href="mailto:info@greentest.cn"><img class="left-item icon-sale" src="img/icon-headset.svg" alt="иконка e-mail 2" width="40" height="40">info@greentest.cn</a>
 				</div>
-				<div class="chat">
-					<textarea class="text-chat">You want to know something?</textarea>
+<!-- Форма обратной связи -->
+				<form class="chat" method="post" action="">
+					<span class="chat-title">Have questions? Write to us:</span>
+					<label>
+						<input type="text" name="Name" class="name-chat" placeholder="Your name" required>
+					</label>
+						<input type="e-mail" name="Email" class="email-chat" placeholder="address@email.com" required>
+					</label>
+						<input type="phone" name="Phone" class="phone-chat" placeholder="+ 7 123 1234567">
+					</label>
+						<textarea class="text-chat" placeholder="Your question" required></textarea>
+					</label>
 					<button class="submit-chat">Send</button>
-				</div>
-			<!--<input type="chat" name="Chat" class="main-chat" placeholder="You want to know something?">-->
+				</form>
 			</div>
 
 			<div class="right-container">
@@ -332,7 +339,7 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 	</a>
 
 <!--Подключение библиотеки jQuery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 <!-- СКРИПТЫ -->
 <script src="scripts.js"></script>

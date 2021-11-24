@@ -1,3 +1,4 @@
+/*!=================Test======================*/
 /*!=================FONTS======================*/
 @font-face {
 			font-family: "DINPro";
@@ -212,6 +213,10 @@ li {
 							a:hover {
 								color: #c0d294;
 							}
+						}
+
+						div {
+							color: #ffffff;
 						}
 
 						.nav-button:hover {
@@ -512,13 +517,22 @@ li {
 	}
 
 	.inner-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		h2 {
 			.h1-title;
+			color: #333333;
 		}
 
 		.inner-content {
-			
+			padding: 0 40px;
+
+			p {
+				text-align: justify;
+				line-height: 30px;
+			}
 		}
 	}
 }
@@ -551,11 +565,11 @@ li {
 
 			.nav-support-item {
 				display: flex;
-				font-size: 14px;
-				line-height: 45px;
+				line-height: 30px;
+				align-items: center;
 				.arrow-mini {
 					.arrow-min;
-					margin: 18px 0 0 2px;
+					//margin: 18px 0 0 2px;
 				}
 
 				a:hover {
@@ -716,16 +730,52 @@ li {
 				height: 326px;
 				margin: 20px 0px 0px 2px;
 
+				.chat-title {
+					color: #333;
+					font-size: 14px;
+					font-weight: 700;
+				}
+
+				.name-chat {
+					margin-top: 20px;
+				}
+
+				.name-chat,
+				.email-chat,
+				.phone-chat {
+					margin-bottom: 20px;
+				}
+
+				.name-chat,
+				.email-chat,
+				.phone-chat,
 				.text-chat {
 					width: 99%;
-					height: 100%;
+					border: 1px solid #a9a9a8;
+					border-radius: 3px;
+					font-size: 14px;
+					color: #333333;
+				}
+
+				.name-chat:active,
+				.email-chat:active,
+				.phone-chat:active,
+				.text-chat:active,
+				.name-chat:focus,
+				.email-chat:focus,
+				.phone-chat:focus,
+				.text-chat:focus {
+					outline: 1px solid #748943;
+					//border-radius: 2px;
+				}
+
+				.text-chat {
+					min-height: 95px;
 				}
 
 				.submit-chat {
-					position: absolute;
 					.green-button;
-					right: 20px;
-					bottom: 17px;
+					margin-top: 20px;
 					outline: none;
 					border: none;
 					color: #ffffff;
