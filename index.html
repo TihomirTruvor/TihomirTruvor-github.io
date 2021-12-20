@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/formit.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/><!--Свайпер-->
 
 	<meta name="viewport" content="width=device-width">
@@ -89,38 +90,41 @@
 		</div>
 	</header>
 <!-- Слайдер -->
-	<div class="slider">
-		<div class="content">
-			<div class="container">
-				<h1>Rear motor <span class="last-word">R-series</span></h1>
-				<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
-						All with compact design to get higher Torque.
-				</span>
-				<a class="slider-button" href="#">More details</a>
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="slider swiper-slide">
+				<div class="content">
+					<div class="container ">
+						<h1>Rear motor <span class="last-word">R-series</span></h1>
+						<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
+								All with compact design to get higher Torque.
+						</span>
+						<a class="slider-button" href="#">More details</a>
+					</div>
+				</div>
+				<img class="back-image" src="img/slider-img.jpg" alt="фон 1 слайдера">
+				<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
+			</div>
+			<div class="slider swiper-slide">
+				<div class="content">
+					<div class="container ">
+						<h1>Front Motor <span class="last-word">F-Series</span></h1>
+						<span class="slider-text">R-series are in High Power,Low noise and High Efficiency. All with compact design to get higher Torque.
+						</span>
+						<a class="slider-button" href="#">More details</a>
+					</div>
+				</div>
+				<img class="back-image" src="img/slider-img.jpg" alt="фон 2 слайдера">
+				<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
 			</div>
 		</div>
-		<img class="back-image" src="img/slider-img.jpg" alt="фон 1 слайдера">
-		<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
 	</div>
-
-<!-- Swiper Slider main container
-	<div class="swiper">
-		<!-- Additional required wrapper
-		<div class="swiper-wrapper">
-			
-			<!-- Slides
-			<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img.jpg" alt="фон 1 слайдера"></div>
-			
-			<div class="swiper-slide"><img class="back-image swiper-lazy" data-src="img/slider-img2.jpg" alt="фон 2 слайдера"></div>
-
-		</div>
-	</div> -->
 
  <!-- Контент -->
 	<main class="main-content">
 	<!-- Категории -->
 		<section class="categories">
-			<div class="left-container">
+			<div class="left-container el-animation">
 				<div class="product">
 					<a href="#">
 						<img class="img-product" src="img/product.jpg" alt="Фон категории товаров">
@@ -131,7 +135,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="right-container">
+			<div class="right-container el-animation">
 				<div class="innovation">
 					<a href="#">
 						<img class="img-innovation" src="img/innovation.jpg" alt="Фон категории инновации">
@@ -158,7 +162,7 @@
 		</section>
 	</main>
 <!-- Поддержка -->
-	<section class="support" id="Support">
+	<section class="support el-animation" id="Support">
 		<div class="container">
 			<div class="nav-support" id="nav-support-id">
 				<h3>Support&Service</h3>
@@ -257,18 +261,32 @@
 		</div>
 	</section>
 <!-- Контакты -->
-	<section class="contacts" id="Cont">
+	<section class="contacts el-animation" id="Cont">
 		<div class="content">
 			<div class="left-container">
-				<div class="left phone">
-					<a href="tel:00(86)13632527554"><img class="left-item icon-phone" src="img/icon-phone.svg" alt="иконка телефона" width="40" height="40">00(86)13632527554</a>
+				<div class="phone-wrapper">
+					<div class="left phone">
+						<a href="#contact"><img class="left-item icon-phone" src="img/icon-phone.svg" alt="иконка телефона" width="40" height="40">+(86)18682128829</a>
+					</div>
+					<div class="left phone">
+						<a href="#contact"><img class="left-item icon-phone" src="img/icon-phone.svg" alt="иконка телефона" width="40" height="40">+(86)13068711319</a>
+					</div>
+					<div class="left phone">
+						<a href="#contact"><img class="left-item icon-phone" src="img/icon-phone.svg" alt="иконка телефона" width="40" height="40">+(86) 2286857225</a>
+					</div>
 				</div>
-				<div class="left sale">
-					<a href="mailto:sales@greentest.cn"><img class="left-item icon-sale" src="img/icon-handshake.svg" alt="иконка e-mail" width="40" height="40">sales@greentest.cn</a>
+				<div class="other-wrapper">
+					<div class="left info">
+						<a href="mailto:Sales@greennovo.pro"><img class="left-item icon-sale" src="img/icon-email.svg" alt="иконка e-mail" width="40" height="40">Sales@greennovo.pro</a>
+					</div>
+					<div class="left info">
+						<a href="https://api.whatsapp.com/send?phone=+8618682128829" target="_blank"><img src="img/icon-whatsapp2.svg" alt="иконка WhatsApp" width="40" height="40">WhatsApp: +8618682128829</a>
+					</div>
+					<div class="left info">
+						<a href="https://api.whatsapp.com/send?phone=+79266494149" target="_blank"><img src="img/icon-whatsapp2.svg" alt="иконка WhatsApp" width="40" height="40">WhatsApp: +79266494149</a>
+					</div>
 				</div>
-				<div class="left info">
-					<a href="mailto:info@greentest.cn"><img class="left-item icon-sale" src="img/icon-headset.svg" alt="иконка e-mail 2" width="40" height="40">info@greentest.cn</a>
-				</div>
+
 <!-- Форма обратной связи -->
 				<form class="chat" method="post" action="">
 					<span class="chat-title">Have questions? Write to us:</span>
@@ -346,22 +364,34 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!-- Свайпер -->
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 	//Свайпер
 const swiper = new Swiper('.swiper', {
 	autoplay: {
-		delay: 2500,
+		delay: 3500,
 		disableOnInteraction: false, //остановка после ручной прокрутки
 	},
 
 	loop: true, //бесконечная прокрутка
 
-	speed: 900, //скорость
+	speed: 2000, //скорость
 
 	keyboard: { //управление с клавы
 		enabled: true,
 		onlyInViewport: true,
 		pageUpDown: true,
+	},
+
+	effect: 'creative', //Эффект появления
+		creativeEffect: {
+			prev: {
+				// will set `translateZ(-400px)` on previous slides
+				translate: [0, 0, -300],
+			},
+			next: {
+				// will set `translateX(100%)` on next slides
+				translate: ['100%', 0, 0],
+			},
 	},
 
 	autoHeight: true, //автовысота
@@ -372,11 +402,11 @@ const swiper = new Swiper('.swiper', {
 	lazy: { // постепенная загрузка картинок
 		loadOnTransitionStart: false,
 		loadPrevNext: false,
-	}
+	},
 
 	//parallax: true,
 });
-</script> -->
+</script>
 
 </body>
 </html>

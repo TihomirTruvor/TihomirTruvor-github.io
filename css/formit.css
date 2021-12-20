@@ -1,0 +1,41 @@
+#jGrowl { 
+    margin:0px 12px 0; 
+}
+.jGrowl.center { 
+    top:45% !important;
+    width:30% !important; 
+    left:35% !important; 
+}
+#jGrowl .jGrowl-notification {
+    position: relative;
+    width: 350px;
+    font-size: 150%;
+    margin: 19px auto;
+    padding: 9px;
+    background: none repeat 0 0 #c0d294 !important;
+    box-shadow: 0 0 0 7px #efd335 !important;
+    border: 0px solid rgba(255, 255, 255, 0.49) !important;
+    border-radius: 0 !important;
+}
+#jGrowl .jGrowl-notification .jGrowl-close {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    color: #fff !important;
+}
+#jGrowl .jGrowl-notification .jGrowl-message {
+    color: #fff !important;
+    font-size: 119%;
+    line-height: 109%;
+}
+#jGrowl .jGrowl-closer {
+    margin: 0 auto;
+    font-size: 119%;
+    line-height: 100%;
+}
+#jGrowl .office-message-success {
+    background-color: #c0d294 !important;
+}
+#jGrowl .ms2-message-success {
+    background-color: #c0d294 !important;
+}

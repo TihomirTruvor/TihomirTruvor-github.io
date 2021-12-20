@@ -1,4 +1,3 @@
-/*!=================Test======================*/
 /*!=================FONTS======================*/
 @font-face {
 			font-family: "DINPro";
@@ -62,6 +61,8 @@
 
 /*!=================ALL STYLE======================*/
 body {
+	max-width: 1920px;
+	margin: 0 auto;
 	font-family: 'DINPro', sans-serif;
 }
 
@@ -185,6 +186,13 @@ li {
 					width: 100%;
 					font-size: 14px;
 					
+					.nav-wrapper {
+						display: flex;
+						justify-content: space-between;
+						width: 83%;
+						flex-wrap: nowrap;
+					}
+
 					.nav-item {
 						display: flex;
 						cursor: pointer;
@@ -197,10 +205,11 @@ li {
 
 						.sub-menu {
 							position:absolute;
+							top: 2px;
 							height: 0; 
 							overflow: hidden; 
 							z-index:1;
-							padding: 0px 5px 5px 5px;
+							padding: 0px 5px 5px 3px;
 							background-color: #333333;
 							opacity: 0; 
 							font-size: 13px;
@@ -296,6 +305,28 @@ li {
 					cursor: pointer;
 				}
 			}
+
+			ol {
+				display: flex;
+				width: 50%;
+				font-size: 12px;
+				color: #748943;
+
+				li {
+					a {
+						color: #748943;
+
+						span {
+							font-size: 12px;
+
+							&:hover {
+								color: #9BC414;
+								border-bottom: 1px solid #9BC414;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -331,72 +362,82 @@ li {
 	cursor: pointer;
 }
 /*!=================SLIDER======================*/
-.slider {
-	display: flex;
-	position: relative;
-	width: 100%;
-	max-height: 800px;
-	//background: url(../img/slider-img.jpg);
-
-	.back-image {
-		width: 100%;
-	}
-
-	.mobile-back-image {
-		display: none;
-	}
-
-	.content {
-		position: absolute;
-		z-index: 2;
-		top: 0;
-		right: 0;
-		//margin-left: auto;
-		width: 50%;
-		height: 100%;
-		background-color: #333333;
-		opacity: 95%;
-
-		.container {
+.swiper {
+	.swiper-wrapper {
+		.slider {
 			display: flex;
-			flex-direction: column;
-			margin: 0 auto;
-			padding: 20% 10px;
-			max-width: 480px;
-			min-width: 340px;
-			text-align: center;
+			position: relative;
+			width: 100%;
+			max-height: 750px;
+			//background: url(../img/slider-img.jpg);
 
-			h1 {
-				.h1-title;
-				.last-word {
-					color: #748943;
+			.back-image {
+				width: 100%;
+				height: 100%;
+			}
+
+			.mobile-back-image {
+				display: none;
+			}
+
+			.content {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				right: 0;
+				//margin-left: auto;
+				width: 50%;
+				height: 100%;
+				background-color: #333333;
+				opacity: 95%;
+
+				.container {
+					display: flex;
+					flex-direction: column;
+					margin: 0 auto;
+					padding: 20% 10px;
+					max-width: 480px;
+					min-width: 340px;
+					text-align: center;
+
+					h1 {
+						.h1-title;
+						.last-word {
+							color: #748943;
+						}
+					}
+
+					.slider-text {
+						margin-bottom: 35px;
+						line-height: 45px;
+						color: #ffffff;
+					}
+
+					.slider-button {
+						margin: 0 auto;
+						.green-button;
+					}
 				}
-			}
-
-			.slider-text {
-				margin-bottom: 35px;
-				line-height: 45px;
-				color: #ffffff;
-			}
-
-			.slider-button {
-				margin: 0 auto;
-				.green-button;
-			}
+			} 
 		}
-	} 
+	}
 }
 
-/*.swiper {
-	width: 100%;
-	max-height: 800px;
-}*/
-
 /*!=================MAIN CONTENT======================*/
+	//Анимация плавного появления
+	.el-animation {
+		opacity: 0;
+	}
+
+	.element-show {
+		opacity: 1;
+		transition: opacity 0.8s;
+	}
 
 .main-content {
 	max-width: @var-width;
 	min-width: @var-min-width;
+	min-height: calc(100vh - 400px);
 	padding: @var-padding-width;
 	margin: 0 auto;
 	margin-top: 40px;
@@ -406,7 +447,6 @@ li {
 		flex-direction: row;
 		justify-content: space-between;
 
-		
 		.left-container {
 			width: 590px;
 			margin-right: 20px;
@@ -456,6 +496,7 @@ li {
 			display: flex;
 			flex-wrap: wrap;
 			width: 590px;
+			transition: 2s opacity;
 
 			.about-greennovo {
 				margin-top: 18px;
@@ -535,6 +576,233 @@ li {
 			}
 		}
 	}
+
+	.product-head {
+			width: 40%;
+
+			h2 {
+				.h1-title;
+				color: #333333;
+			}
+
+			span {
+				font-size: 20px;
+				font-weight: bold;
+				color: #748943;
+			}
+		}
+
+	.product-container {
+
+		.product-content-top,
+		.product-content-bottom {
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			margin: 20px 0 0 0;
+
+			.inner-product {
+				width: 390px;
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+					transition: 2s;
+
+					&:hover {
+						transform: scale(1.2);
+					}
+
+					.img-inner-product {
+						max-width: 100%;
+						border-radius: 15px;
+					}
+					
+					.mobile-img-inner-product {
+						display: none;
+					}
+
+					h3 {
+						font-size: 20px;
+						color: #333333;
+					}
+				}
+			}
+
+			.inner-product:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+
+		.product-content-bottom {
+			margin-top: 0;
+		}
+	}
+
+	.item-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.left-slider {
+			width: 50%;
+			margin-right: 20px;
+
+			.item-image {
+				height: auto !important;
+
+				.item-left-img {
+					//width: 590px;
+					.item-img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		.item-right-wrapper {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+
+			.item-head {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+
+				h2 {
+					.h1-title;
+					line-height: 0;
+					margin-top: 8px;
+					color: #333333;
+				}
+
+				span {
+					font-size: 20px;
+					font-weight: bold;
+					color: #748943;
+				}
+			}
+
+			.right-slider {
+				display: flex;
+				flex-direction: column-reverse;
+				width: 100%;
+				margin-top: 60px;
+
+				.item-content {
+					margin-top: 20px;
+					
+					.item-right-text {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						width: 100%;
+						
+						h3 {
+							margin: 0 auto;
+							margin-bottom: 15px;
+							font-size: 20px;
+							font-weight: bold;
+							color: #333333;
+						}
+
+						.item-text {
+							display: flex;
+							flex-direction: column;
+						}
+
+						.all-text-wrapper {
+							display: flex;
+							flex-direction: column;
+							width: fit-content;
+						}
+
+						.btn-all-text {
+							position: relative;
+							list-style-type: none;
+							width: fit-content;
+							margin: 15px auto;
+							outline: none;
+							border: none;
+							color: #f2a765;
+							cursor: pointer;
+							line-height: 1;
+							font-size: 14px;
+							//text-shadow: 1px 0px 1px #333333;
+							//width: 100%;
+							//padding: 15px 69px 15px 68px;
+							//border-radius: 3px;
+							//background-color: #748943;
+
+							&:hover {
+								color: #748943;
+							}
+						}
+
+						.btn-all-text:after {
+								display: block;
+								position: absolute;
+								left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+								width: 0;/*задаём длинну линии до наведения курсора*/
+								height: 1px; /*задаём ширину линии*/
+								background-color: #748943; /*задаём цвет линии*/
+								content: "";
+								transition: width 0.3s ease-out; /*задаём время анимации*/
+							}
+
+						.btn-all-text:hover:after,
+						{
+							width: 100%;
+						}
+
+						details[open] summary {
+
+						}
+
+						/* Убираем стандартный маркер Chrome */
+						details summary::-webkit-details-marker {
+							display: none;
+						}
+						/* Убираем стандартный маркер Firefox */
+						details > summary {
+							list-style: none;
+						}
+					}
+				}
+
+				.swiper-pagination {
+					display: flex;
+					justify-content: space-evenly;
+					flex-wrap: wrap;
+					position: relative;
+					bottom: 0;
+					width: 100%;
+					.swiper-pagination-bullet {
+						width: auto;
+						height: auto;
+						margin: 0;
+						background: none;
+						font-size: 20px;
+						font-weight: bold;
+						color: #333333;
+						opacity: 1;
+
+						&:focus-visible {
+							outline: none;
+						}
+					}
+					.swiper-pagination-bullet-active {
+						color: #748943;
+					}
+				}
+			}
+		}
+	}
 }
 
 .support {
@@ -569,6 +837,7 @@ li {
 				align-items: center;
 				.arrow-mini {
 					.arrow-min;
+					transform: none;
 					//margin: 18px 0 0 2px;
 				}
 
@@ -684,6 +953,7 @@ li {
 
 		.img-support {
 			width: 590px;
+			transition: 2s opacity;
 
 			img {
 				width: 100%;
@@ -706,28 +976,53 @@ li {
 		margin: 0 auto;
 
 		.left-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: left;
+			align-self: baseline;
 			width: 590px;
 			margin-right: 20px;
-			div a {
-				display: flex;
-				align-items: center;
-				color: #333333;
-				font-size: 14px;
-				font-weight: bold;
+			
+			.phone-wrapper {
+				div a {
+					display: flex;
+					align-items: center;
+					color: #333333;
+					font-size: 14px;
+					font-weight: bold;
 
-				.left-item {
-					margin-right: 4px;
+					.left-item {
+						margin-right: 4px;
+					}
+				}
+				.phone {
+					margin-bottom: 20px;
 				}
 			}
 
-			.sale {
-				margin: 20px 0;
+			.other-wrapper {
+				margin-left: 100px;
+
+				div a {
+					display: flex;
+					align-items: center;
+					color: #333333;
+					font-size: 14px;
+					font-weight: bold;
+
+					.left-item {
+						margin-right: 4px;
+					}
+				}
+				.info {
+					margin-bottom: 20px;
+				}
 			}
 
 			.chat {
 				position: relative;
 				width: 100%;
-				height: 326px;
+				//height: 326px;
 				margin: 20px 0px 0px 2px;
 
 				.chat-title {
@@ -770,7 +1065,7 @@ li {
 				}
 
 				.text-chat {
-					min-height: 95px;
+					min-height: 80px;
 				}
 
 				.submit-chat {
@@ -784,7 +1079,8 @@ li {
 		}
 		.right-container {
 			width: 590px;
-			
+			transition: 2s opacity;
+
 			.address {
 				display: flex;
 				align-items: center;
@@ -833,12 +1129,9 @@ li {
 					a {
 					display: flex;
 					align-items: center;
+					color: #bcbcbc;
 					&:hover{
 						color: #c0d294;
-					}
-
-					.mob-list-2-prod {
-						display: none;
 					}
 
 					img {
@@ -847,6 +1140,14 @@ li {
 						margin-right: 4px;
 					}
 				}
+			}
+			.mob-list-2-prod {
+				display: none;
+			}
+
+			.weechat {
+				pointer-events: none;
+				cursor: default;
 			}
 		}
 	}
@@ -860,7 +1161,7 @@ li {
 			padding: 20px 0;
 			text-align: center;
 			font-size: 13px;
-			color: #ffffff;
+			color: #bcbcbc;
 		}
 	}
 }

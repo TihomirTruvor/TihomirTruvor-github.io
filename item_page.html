@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link type="image/x-icon" rel="shortcut icon" href="img/favicon_32.ico">
+	<link type="image/png" sizes="16x16" rel="icon" href="img/favicon_16.png">
+	<link type="image/png" sizes="32x32" rel="icon" href="img/favicon_32.png">
+	<link type="image/png" sizes="96x96" rel="icon" href="img/favicon_96.png">
+	<link type="image/png" sizes="120x120" rel="icon" href="img/favicon_120.png">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/><!--Свайпер-->
+
+	<meta name="viewport" content="width=device-width">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Greennovo</title>
+</head>
+<body>
+<!-- Шапка сайта -->
+	<header class="main-header">
+		<div class="top-wrapper">
+			<div class="container">
+				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
+					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
+				</a>
+				<nav class="navigation">
+
+					<input id="menu__toggle" type="checkbox" /><!--Для мобильного меню-->
+					<label class="menu__btn" for="menu__toggle"><!--Для мобильного меню-->
+						<span></span>
+					</label>
+
+					<div class="container1">
+						<div class="nav-item">
+							<a class="nav-button" href="#">About Greennovo</a>
+						</div>
+						<div class="nav-item">
+							<a class="nav-button" href="#">Product Center</a>
+							<ul class="sub-menu">
+								<li><a href="#">Greennovo Motor</a></li>
+								<li><a href="#">Battery</a></li>
+								<li><a href="#">Display</a></li>
+								<li><a href="#">Controller</a></li>
+							</ul>
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
+							<ul class="sub-menu">
+								<li><a href="#">Innovation Idea</a></li>
+								<li><a href="#">Qualification Certificates</a></li>
+								<li><a href="#">Test Laboratory</a></li>
+								<li><a href="#">Manufacturing Base</a></li>
+							</ul>
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
+							<ul class="sub-menu">
+								<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
+								<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
+								<li class="sub-menu-item"><a href="#popup-as">After-Sale Service</a></li>
+								<li class="sub-menu-item"><a href="#popup-ts">Technology Support</a></li>
+							</ul>
+							<div class="arrow-mini"></div>
+						</div>
+						<div class="nav-item"><a class="nav-button" href="#Cont">Contact Us</a></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="bottom-wrapper">
+			<div class="container">
+				<div class="language">
+					<a href="#">English</a>
+				</div>
+<!-- Поиск -->
+				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
+					<input type="search" name="Search" class="main-search" placeholder="Search">
+
+					<input type="submit" value=" " class="search-button" title="Go search">
+				</form>
+<!-- Мобильный поиск -->
+					<input type="button" value=" " class="mobile-search-button" title="Mobile search">	
+					<input type="button" value=" " class="mobile-close-search" title="Закрыть поиск">
+			</div>
+		</div>
+	</header>
+
+<!-- Контент -->
+	<main class="main-content">
+		<div class="item-wrapper"><!--Обёртка слайдера-->
+			<div class="left-slider swiper"> <!--Левая часть-->
+				<div class="item-image swiper-wrapper">
+					<div class="item-left-img swiper-slide">
+						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="item-left-img swiper-slide">
+						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="item-left-img swiper-slide">
+						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="item-right-wrapper"><!--Правая часть-->
+		<div class="item-head"><!--Заголовок страницы-->
+			<h2>[[*pagetitle]]</h2>
+			<span>[[*rear-motor-text]]</span>
+		</div>
+		<div class="right-slider swiper">
+			<div class="item-content swiper-wrapper">
+				<div class="item-right-text swiper-slide"><!--1 товар-->
+					<h3>Rear motors</h3>
+					<div class="item-text">Характеристики Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ut optio, magni harum quisquam similique sint architecto velit vero laborum quia, repellendus sit, repudiandae? Sed quibusdam animi, odit optio expedita!</div>
+					<details class="all-text-wrapper">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam iure sed itaque dolorum quo adipisci. Repudiandae, omnis fuga culpa, sapiente veritatis illo! Eligendi iure voluptate unde delectus est iusto. Something small enough to escape casual notice.</p>
+						<summary class="btn-all-text">All parameters</summary>
+					</details>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div><!--Пагинация (переключение между товарами)-->
+		</div>
+	</div>
+		</div>
+	</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-top-wrapper">
+			<div class="container">
+				<ul class="list-1">
+					<li><a href="#">About Greennovo</a></li>
+					<li><a href="#">R&D Innovation</a></li>
+					<li><a href="#Stat">Statistics</a></li>
+					<li><a href="#Sup">Support&Service</a></li>
+				</ul>
+				<ul class="list-2">
+					<li class="list-2-item"><a href="#">Rear Motor R-Series</a></li>
+					<li class="list-2-item"><a href="#">Front Motor F-Series</a></li>
+					<li class="list-2-item"><a href="#">Battery</a></li>
+					<li class="list-2-item"><a href="#">Display</a></li>
+					<li class="list-2-item"><a href="#">Controller</a></li>
+					<li class="mob-list-2-prod"><a href="#">Product center</a></li>
+				</ul>
+				<ul class="soc-1">
+					<li><a class="weechat" href="https://msngr.link/wc/79871170012" target="_blank"><img src="img/icon-weechat.svg" alt="иконка Вичата">WeChat: lihaistas</a></li>
+					<li><a href="https://api.whatsapp.com/send?phone=8613632527554" target="_blank"><img src="img/icon-whatsapp.svg" alt="иконка WhatsApp">WhatsApp: +8613632527554</a></li>
+				</ul>
+				<ul class="soc-2">
+					<li><a href="https://www.facebook.com/greentest.official" target="_blank"><img src="img/icon-facebook.svg" alt="иконка Facebook">Facebook</a></li>
+					<li><a href="https://www.youtube.com/channel/UCisopLJJey-qrG2k5Qy3iAg" target="_blank"><img src="img/icon-youtube.svg" alt="иконка YouTube">You Tube</a></li>
+					<li><a href="https://www.instagram.com/greentest.official" target="_blank"><img src="img/icon-instagram.svg" alt="иконка Instagram">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-bottom-wrapper">
+			<p class="footer-text">&#169; <!-- Знак копирайта-->
+				<script>document.write(new Date().getFullYear());</script><!-- Автоизменение года-->
+				 Greennovo Science & Technology Co., LTD</p>
+		</div>
+	</footer>
+
+<!-- Стрелка наверх -->
+	<a class="back-to-top" title="Наверх">
+		<img src="img/angle-up.svg" alt="иконка Наверх">
+	</a>
+
+<!--Подключение библиотеки jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<!-- СКРИПТЫ -->
+<script src="scripts.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!-- Свайпер -->
+
+<script type="text/javascript">
+	//Свайпер
+
+let swiperImg = new Swiper(document.querySelector('.left-slider'), {
+	
+	preloadImages: false,
+
+	lazy: { // поочередная загрузка картинок
+		loadOnTransitionStart: false,
+		loadPrevNext: false,
+	},
+
+	speed: 1200, //скорость
+
+	keyboard: { //управление с клавы
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
+	},
+
+	autoHeight: true, //автовысота
+
+	/*autoplay: {
+		delay: 3500,
+		disableOnInteraction: false, //остановка после ручной прокрутки
+	},*/
+
+	//loop: true, //бесконечная прокрутка
+
+	/*effect: 'creative', //Эффект появления
+		creativeEffect: {
+			prev: {
+				// will set `translateZ(-400px)` on previous slides
+				translate: [0, 0, -300],
+			},
+			next: {
+				// will set `translateX(100%)` on next slides
+				translate: ['100%', 0, 0],
+			},
+	},*/
+
+	//grabCursor: true,
+	//slideToClickedSlide: true,
+
+	//parallax: true,
+
+	/*zoom: {
+		maxRatio: 3,
+		minRatio: 1,
+	},*/
+});
+
+let menu = ['GNM-R1', 'GNM-R2', 'GNM-R3'] //массив текста для пагинации
+let swiperText = new Swiper ('.right-slider', {
+	//Пагинация с текстом
+	pagination: {
+		el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (menu[index]) + '</span>';
+			},
+	},
+});
+
+swiperImg.controller.control = swiperText; //Контроль от одного слайдера к другому
+swiperText.controller.control = swiperImg;
+</script>
+</body>
+</html>
