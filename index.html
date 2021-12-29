@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	
 	<link type="image/x-icon" rel="shortcut icon" href="img/favicon_32.ico">
 	<link type="image/png" sizes="16x16" rel="icon" href="img/favicon_16.png">
 	<link type="image/png" sizes="32x32" rel="icon" href="img/favicon_32.png">
@@ -75,8 +74,44 @@
 		<div class="bottom-wrapper">
 			<div class="container">
 				<div class="language">
-					<a href="#">English</a>
+					<button class="button-lang">Lang</button>
+					<div class="sub-lang">
+						<a href="../cn/">中国人</a>
+						<a href="https://greennovo.pro">English</a>
+					</div>
 				</div>
+<script type="text/javascript">
+	// Меню
+	var lang = document.getElementsByClassName('language');
+
+	for(var i=0; i<lang.length; i++) {
+		lang[i].addEventListener("mouseenter", showSub, false);
+		lang[i].addEventListener("mouseleave", hideSub, false);
+	}
+
+	function showSub(e) { // Отображение подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "auto";
+			this.children[1].style.overflow = "visible";
+			this.children[1].style.opacity = "1";
+			this.children[1].style.display = "flex";
+		} else {
+			return false;
+		}
+	}
+
+	function hideSub(e) { // Скрытие подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "0px";
+			this.children[1].style.overflow = "hidden";
+			this.children[1].style.opacity = "0";
+			this.children[1].style.display = "none";
+		}
+		else {
+			return false;
+		}
+	}
+</script>
 <!-- Поиск -->
 				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
 					<input type="search" name="Search" class="main-search" placeholder="Search">
@@ -299,7 +334,14 @@
 					</label>
 						<textarea class="text-chat" placeholder="Your question" required></textarea>
 					</label>
-					<button class="submit-chat">Send</button>
+
+					<div class="checked-policy">
+						<button class="submit-chat">Send</button>
+						<div class="checked-wrapper">
+							<input type="checkbox" class="check-policy" name="policy">
+							<label for="policy" class="label-policy">Отправляя форму, я соглашаюсь с <a href="" target="_blank">политикой конфиденциальности</a></label>
+						</div>
+					</div>
 				</form>
 			</div>
 
@@ -349,7 +391,12 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 				<script>document.write(new Date().getFullYear());</script><!-- Автоизменение года-->
 				 Greennovo Science & Technology Co., LTD</p>
 		</div>
+		<div id="cookie_notification">
+			<p>By using the greennovo.pro website, I consent to the processing of my personal data using cookies and third-party services and accept the terms of the <a href="../privacy-policy.html">Privacy Policy</a></p>
+			<button class="button cookie_accept">Accept</button>
+		</div>
 	</footer>
+	
 
 <!-- Стрелка наверх -->
 	<a class="back-to-top" title="Наверх">

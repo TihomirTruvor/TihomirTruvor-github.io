@@ -139,6 +139,22 @@ swiperSlide[index].addEventListener('mouseout',function(e){
 })
 }*/
 
+jQuery(window).scroll(function() {
+
+	if (jQuery(this).scrollTop()>20)
+		{
+			jQuery('.language').fadeOut();  
+		}
+	else
+		{
+			jQuery('.language').fadeIn();
+		}
+});
+
+
+
+
+
 
 
 
