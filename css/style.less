@@ -547,8 +547,6 @@ li {
 				}
 			}
 		}
-		
-
 		.right-container {
 			display: flex;
 			flex-wrap: wrap;
@@ -604,16 +602,150 @@ li {
 	}
 
 	.statistic {
+		display: flex;
+		justify-content: space-between;
 		width: 100%;
 		margin: 0 auto;
 		margin-top: 40px;
-		text-align: center;
+		//text-align: center;
 
-		img { // Временная заглушка 
-			width: 100%;
+		.stat {
+			display: flex;
+			flex-direction: column;
+			width: 52%;
+
+			.item {
+				display: flex;
+				align-items:center;
+
+				.item-images {
+					display: flex;
+					flex-direction: column;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+
+					img {
+						width:210px;
+					}
+
+					.item__three {
+						transform-origin: 0px 145px;
+						animation-name: green__three;
+						animation-duration: 2s;
+						animation-iteration-count: infinite;
+						animation-direction: alternate;
+					}
+
+					@keyframes green__three {
+						0% {
+							transform: skewX(0deg);
+						}
+
+						100% {
+							transform: skewX(5deg) scale(1, 0.95);
+							//transform: matrix(1, 3, 1, 1, 2, 2);
+						}
+					}
+
+					.item__earch {
+						animation-name: earch__rotation;
+						animation-duration: 12s;
+						animation-iteration-count: infinite;
+						animation-timing-function: linear;
+
+					}
+
+					@keyframes earch__rotation {
+						0% {
+								transform:rotate(0deg);
+						}
+
+						100% {
+							transform:rotate(360deg);
+						}
+					}
+
+					.item__co2 {
+						animation-name: green__co2;
+						animation-duration: 2s;
+						animation-iteration-count: infinite;
+						animation-direction: alternate;
+					}
+
+					@keyframes green__co2 {
+						0% {
+							transform: rotateX(0deg);
+						}
+
+						100% {
+							transform: perspective(85px) rotateX(10deg) skewX(5deg);
+						}
+					}
+
+					.item__mot {
+						animation-name: green__mot;
+						animation-duration: 0.3s;
+						animation-iteration-count: infinite;
+						animation-direction: alternate;
+					}
+
+					@keyframes green__mot {
+						0% {
+							transform: skewX(-1deg);
+						}
+
+						100% {
+							transform: skewX(1deg) scale(1, 0.95);
+							//transform: matrix(1, 3, 1, 1, 2, 2);
+						}
+					}
+					
+					.item__line {
+						animation-name: line__bottom;
+						animation-duration: 5s;
+						animation-iteration-count: infinite;
+						animation-timing-function: linear;
+					}
+
+					@keyframes line__bottom {
+						0% {
+							transform: translate(-50%, 0);
+						}
+
+						100% {
+							transform: translate(90%, 0);
+						}
+					}
+
+				.item-text {
+					display: flex;
+					flex-direction: column;
+
+					.counter {
+						font-size: 4rem;
+						font-weight: bold;
+						color: #333333;
+						line-height: 1;
+						margin: 0;
+					}
+
+					.sup-count {
+						font-size: 18px;
+						//font-weight: bold;
+
+						sub {
+
+						}
+					}
+				}
+				.sub-count {
+					margin-bottom: 7rem;
+				}
+			}
 		}
 	}
-
+/*!==========Внутренние страницы (не каталог)==========*/
 	.inner-container {
 		display: flex;
 		flex-direction: column;
@@ -730,6 +862,7 @@ li {
 			}
 		}
 	}
+/*!==========Конец внутренние страницы (не каталог)==========*/
 
 	.product-head {
 			width: 40%;
