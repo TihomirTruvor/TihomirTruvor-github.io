@@ -74,7 +74,7 @@
 		<div class="bottom-wrapper">
 			<div class="container">
 				<div class="language">
-					<button class="button-lang">Lang</button>
+					<button class="button-lang">Language</button>
 					<div class="sub-lang">
 						<a href="../cn/">中国人</a>
 						<a href="https://greennovo.pro">English</a>
@@ -123,37 +123,42 @@
 					<input type="button" value=" " class="mobile-close-search" title="Закрыть поиск">
 			</div>
 		</div>
-	</header>
 <!-- Слайдер -->
-	<div class="swiper">
-		<div class="swiper-wrapper">
-			<div class="slider swiper-slide">
-				<div class="content">
-					<div class="container ">
-						<h1>Rear motor <span class="last-word">R-series</span></h1>
-						<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
-								All with compact design to get higher Torque.
-						</span>
-						<a class="slider-button" href="#">More details</a>
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="slider swiper-slide">
+					<img class="back-image " src="img/slider-img.jpg" alt="фон 1 слайдера">
+					<div class="mask"></div>
+					<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
+					<div class="mask"></div>
+					<div class="content">
+						<div class="container ">
+							<h1>Rear motor <span class="last-word">R-series</span></h1>
+							<span class="slider-text">R-series are in High Power,Low noise and High Efficiency.
+									All with compact design to get higher Torque.
+							</span>
+							<a class="slider-button" href="#">More details</a>
+						</div>
 					</div>
 				</div>
-				<img class="back-image" src="img/slider-img.jpg" alt="фон 1 слайдера">
-				<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
-			</div>
-			<div class="slider swiper-slide">
-				<div class="content">
-					<div class="container ">
-						<h1>Front Motor <span class="last-word">F-Series</span></h1>
-						<span class="slider-text">R-series are in High Power,Low noise and High Efficiency. All with compact design to get higher Torque.
-						</span>
-						<a class="slider-button" href="#">More details</a>
+				<div class="slider swiper-slide">
+
+					<img class="back-image" src="img/slider-img21.jpg" alt="фон 2 слайдера">
+					<div class="mask"></div>
+					<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
+					<div class="mask"></div>
+					<div class="content">
+						<div class="container ">
+							<h1>Front Motor <span class="last-word">F-Series</span></h1>
+							<span class="slider-text">R-series are in High Power,Low noise and High Efficiency. All with compact design to get higher Torque.
+							</span>
+							<a class="slider-button" href="#">More details</a>
+						</div>
 					</div>
 				</div>
-				<img class="back-image" src="img/slider-img.jpg" alt="фон 2 слайдера">
-				<img class="mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
 			</div>
 		</div>
-	</div>
+	</header>
 
  <!-- Контент -->
 	<main class="main-content">
@@ -451,49 +456,48 @@ CHINA MERCHANTS STREET, NANSHAN DISTRICT, SHENZHEN</a>
 
 <script type="text/javascript">
 	//Свайпер
-const swiper = new Swiper('.swiper', {
-	autoplay: {
-		delay: 3500,
-		disableOnInteraction: false, //остановка после ручной прокрутки
+let swiper = new Swiper('.swiper', {
+        
+    	autoplay: {
+    		delay: 4000,
+    		disableOnInteraction: false, //остановка после ручной прокрутки
+    	},
+    
+    	loop: true, //бесконечная прокрутка
+    
+    	speed: 1500, //скорость
+    
+    	keyboard: { //управление с клавы
+    		enabled: true,
+    		onlyInViewport: true,
+    		pageUpDown: true,
+    	},
+    
+    	effect: 'fade', //Эффект появления
+    		/*creativeEffect: {
+    			prev: {
+    				// will set `translateZ(-400px)` on previous slides
+    				translate: [0, 0, -300],
+    			},
+    			next: {
+    				// will set `translateX(100%)` on next slides
+    				translate: ['100%', 0, 0],
+    			},
+    	},*/
+    
+    	//autoHeight: true, //автовысота
+    	
+/*lazy: { // поочередная загрузка картинок
+	loadOnTransitionStart: false,
+	loadPrevNext: false,
 	},
-
-	loop: true, //бесконечная прокрутка
-
-	speed: 2000, //скорость
-
-	keyboard: { //управление с клавы
-		enabled: true,
-		onlyInViewport: true,
-		pageUpDown: true,
-	},
-
-	effect: 'creative', //Эффект появления
-		creativeEffect: {
-			prev: {
-				// will set `translateZ(-400px)` on previous slides
-				translate: [0, 0, -300],
-			},
-			next: {
-				// will set `translateX(100%)` on next slides
-				translate: ['100%', 0, 0],
-			},
-	},
-
-	autoHeight: true, //автовысота
-
-	//grabCursor: true,
-	//slideToClickedSlide: true,
-
-	lazy: { // постепенная загрузка картинок
-		loadOnTransitionStart: false,
-		loadPrevNext: false,
-	},
-
-	//parallax: true,
-});
+preloadImages: true,*/
+    
+//parallax: true,
+//grabCursor: true,
+//slideToClickedSlide: true,
+    });
 </script>
 
 </body>
 </html>
-
-31.31.196.178, 2a00:f940:2:2:1:1:0:195

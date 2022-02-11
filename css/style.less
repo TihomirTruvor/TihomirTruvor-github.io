@@ -17,6 +17,15 @@
 			font-display: swap;
 }
 
+@font-face {
+			font-family: "DINPro-Light";
+			src: url("../fonts/DINPro-Light.woff2") format("woff2"),
+			url("../fonts/DINPro-Light.woff") format("woff");
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+}
+
 /*!=================MIXIN======================*/
 .green-button {
 	padding: 15px 69px 15px 68px;
@@ -117,9 +126,11 @@ li {
 
 /*!=================HEDER======================*/
 .main-header {
-
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	width: 100%;
+	height: 100vh;
 
 	.top-wrapper {
 		position: fixed;
@@ -269,7 +280,7 @@ li {
 	}
 
 	.bottom-wrapper {
-			margin-top: 86px;
+		margin-top: 86px;
 		.container {
 
 			display: flex;
@@ -287,25 +298,28 @@ li {
 				display: flex;
 				flex-direction: column;
 				position: relative;
+				z-index: 2;
 				button {
 					width: 95px;
 					border-radius: 2px;
-					margin-right: 2px;
+					//margin-right: 2px;
 					padding: 4px 0 6px 0;
-					text-align: center;
-					background-color: #748943;
-					font-size: 13px;
-					font-weight: 500;
-					letter-spacing: 1px;
-					color: #ffffff;
+					//text-align: center;
+					background-color: transparent;
 					text-shadow: 1px 1px 1px #333333;
 					border: none;
 					outline: none;
 					cursor: pointer;
-					&:hover {
+					transition: 0.2s;
+					font-family: 'DINPro-Light', sans-serif;
+					font-size: 0.9rem;
+					font-weight: lighter;
+					letter-spacing: 1px;
+					color: #ffffff;
+					/*&:hover {
 						background-color: #9BC414;
 						text-shadow: none;
-					}
+					}*/
 				}
 				.sub-lang {
 					display: none;
@@ -313,7 +327,7 @@ li {
 					position: absolute;
 					top: 24px;
 					z-index: 2;
-					transition: all .5s ease-in;
+					//transition: all 1.5s ease-in;
 					a {
 						width: 95px;
 						//border-radius: 2px;
@@ -326,6 +340,7 @@ li {
 						letter-spacing: 1px;
 						color: #ffffff;
 						text-shadow: 1px 1px 1px #333333;
+						transition: 1s;
 						&:hover {
 							background-color: #9BC414;
 							text-shadow: none;
@@ -336,7 +351,7 @@ li {
 /*!=================SEARCH======================*/
 			.search {
 				position: relative;
-				display: flex;
+				display: none;
 				align-items: center;
 				width: 50%;
 
@@ -388,97 +403,130 @@ li {
 	}
 }
 /*!=================MOBILE-SEARCH======================*/
-.mobile-search-button {
-	position: fixed;
-	display: none;
-	left: 48%;
-	top: 18px;
-	z-index: 6;
-	width: 50px;
-	height: 50px;
-	box-sizing: border-box;
-	border: none;
-	outline: none;
-	background-color: transparent;
-	background-image: url(../img/icon-search-mobile.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	cursor: pointer;
-}
+	.mobile-search-button {
+		position: fixed;
+		display: none;
+		left: 48%;
+		top: 18px;
+		z-index: 6;
+		width: 50px;
+		height: 50px;
+		box-sizing: border-box;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		background-image: url(../img/icon-search-mobile.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
 
-.mobile-close-search {
-	display: none;
-	//width: 30px;
-	//height: 30px;
-	background-color: transparent;
-	background-image: url(../img/icon-close-search.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	border: none;
-	outline: 0;
-	cursor: pointer;
-}
+	.mobile-close-search {
+		display: none;
+		//width: 30px;
+		//height: 30px;
+		background-color: transparent;
+		background-image: url(../img/icon-close-search.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		outline: 0;
+		cursor: pointer;
+	}
 /*!=================SLIDER======================*/
-.swiper {
-	.swiper-wrapper {
-		.slider {
-			display: flex;
-			position: relative;
-			width: 100%;
-			max-height: 750px;
-			//background: url(../img/slider-img.jpg);
+	.swiper {
+		position:absolute !important;
+		width: 100%;
+		z-index: 0 !important;
+		.swiper-wrapper {
+			.slider {
+				display: flex;
+				position: relative;
+				//width: 100%;
+				//height: 100vh;
+				//background: url(../img/slider-img.jpg);
 
-			.back-image {
-				width: 100%;
-				height: 100%;
-			}
+				.back-image {
+					width: 100%;
+					height: 100%;
+				}
 
-			.mobile-back-image {
-				display: none;
-			}
+				.mobile-back-image {
+					display: none;
+				}
 
-			.content {
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				right: 0;
-				//margin-left: auto;
-				width: 50%;
-				height: 100%;
-				background-color: #333333;
-				opacity: 95%;
+				.mask {
+					position:fixed;
+					background-color:rgba(0,0,0,.4);
+					width:100%;
+					height:100%;
+					top:0;
+					left:0;
+				}
 
-				.container {
-					display: flex;
-					flex-direction: column;
-					margin: 0 auto;
-					padding: 20% 10px;
-					max-width: 480px;
-					min-width: 340px;
-					text-align: center;
+				.content {
+					position: absolute;
+					z-index: 2;
+					top: 0;
+					left: 50%;
+					width: @var-width;
+					margin-left: -600px;
+					//height: 100%;
+					//background-color: #333333;
+					//opacity: 95%;
 
-					h1 {
-						.h1-title;
-						.last-word {
-							color: #748943;
+					.container {
+						display: flex;
+						flex-direction: column;
+						margin: 25% 0;
+						//padding: 30% 0;
+						//max-width: 480px;
+						min-width: 340px;
+						text-align: left;
+
+						h1 {
+							.h1-title;
+							.last-word {
+								font-size: 3.5rem;
+								color: #748943;
+							}
+							font-size: 3.5rem;
+						}
+
+						.slider-text {
+							max-width: 600px;
+							margin-bottom: 3rem;
+							line-height: 45px;
+							font-family: 'DINPro-Light', sans-serif;
+							font-size: 1.2rem;
+							font-weight: lighter;
+							color: rgb(209, 209, 209);
+
+						}
+
+						.slider-button {
+							cursor: pointer;
+							max-width: fit-content;
+							//height: 60px;
+							//.green-button;
+							padding: 20px 68px 20px 68px;
+							font-size: 1.2rem;
+							//color: rgb(209, 209, 209);
+							color: #ffffff;
+							background-color: transparent;
+							border: 1px solid #f98500;
+							border-radius: 30px;
+							transition: 1s;
+						}
+						.slider-button:hover {
+							background-color: #f98500;
 						}
 					}
-
-					.slider-text {
-						margin-bottom: 35px;
-						line-height: 45px;
-						color: #ffffff;
-					}
-
-					.slider-button {
-						margin: 0 auto;
-						.green-button;
-					}
-				}
-			} 
+				} 
+			}
 		}
 	}
-}
+
 
 /*!=================MAIN CONTENT======================*/
 	//Анимация плавного появления
