@@ -159,7 +159,39 @@
 			</div>
 		</div>
 	</header>
-
+	<!-- Зелёный разделитель -->
+	<section class="product_wrapper">
+		<div class="product_wrapper_container">
+			<div class="product_item motor">
+				<img src="img/svg-motor-image (2).svg" width="65px" height="65px">
+				<div class="product_item_content">
+					<h3>Motor</h3>
+					<p>High power is good</p>
+				</div>
+			</div>
+			<div class="product_item controller">
+				<img src="img/svg-controller-image (2).svg" width="46px" height="73px">
+				<div class="product_item_content">
+					<h3>Controller</h3>
+					<p>Proper control of the e-motor</p>
+				</div>
+			</div>
+			<div class="product_item display">
+				<img src="img/svg-display-image (2).svg" width="65px" height="65px">
+				<div class="product_item_content">
+					<h3>Display</h3>
+					<p>All information on the display</p>
+				</div>
+			</div>
+			<div class="product_item battery">
+				<img src="img/svg-battery-image (2).svg" width="65px" height="65px">
+				<div class="product_item_content">
+					<h3>Battery</h3>
+					<p>Long charge, high reliability</p>
+				</div>
+			</div>
+		</div>
+	</section>
  <!-- Контент -->
 	<main class="main-content">
 	<!-- Категории -->
@@ -167,30 +199,43 @@
 			<div class="left-container el-animation">
 				<div class="product">
 					<a href="#">
-						<img class="img-product" src="img/product.jpg" alt="Фон категории товаров">
-						<img class="mobile-img-product" src="img/mobile-product.jpg" alt="Мобильный фон категории товаров">
+						<div class="img-product"></div>
+						<div class="mobile-img-product"></div>
+						<div class="mask_categories"></div>
 						<div class="h2-content">
 							<h2>Product Center</h2>
+							<div class="delimiter"></div>
+							<p>Greennovo Products are known as highest quality and reliable service support. We dedicated in producing innovative&high-quality products to all customers. Our goal is to make all customers enjoy their riding by using our products.</p>
 						</div>
 					</a>
 				</div>
 			</div>
+			<alibaba_icbu_open_product_post_response><font></font>
+			<product_id>1600439360611-904396868</product_id><font></font>
+			<str_product_id>6edvniewvnewovn</str_product_id><font></font>
+			</alibaba_icbu_open_product_post_response><font></font>
 			<div class="right-container el-animation">
 				<div class="innovation">
 					<a href="#">
-						<img class="img-innovation" src="img/innovation.jpg" alt="Фон категории инновации">
-						<img class="mobile-img-innovation" src="img/mobile-innovation.jpg" alt="Мобильный фон категории инновации">
+						<div class="img-innovation"></div>
+						<div class="mobile-img-innovation"></div>
+						<div class="mask_categories"></div>
 						<div class="h2-content">
 							<h2>R&D Innovation</h2>
+							<div class="delimiter"></div>
+							<p>Greennovo is a manufacturer with strong innovation ability. Using the original technology as the basis, we are committed to the introduction of electronic technology and strive to develop innovative products in the industry.</p>
 						</div>
 					</a>
 				</div>
 				<div class="about-greennovo">
 					<a href="#">
-						<img class="img-about" src="img/about.jpg" alt="Фон категории О компании">
-						<img class="mobile-img-about" src="img/mobile-about.jpg" alt="Мобильный фон категории О компании">
+						<div class="img-about"></div>
+						<div class="mobile-img-about"></div>
+						<div class="mask_categories"></div>
 						<div class="h2-content">
 							<h2>Greennovo</h2>
+							<div class="delimiter"></div>
+							<p>Greennovo is a manufacturer with strong innovation ability. Using the original technology as the basis, we are committed to the introduction of electronic technology and strive to develop innovative products in the industry.</p>
 						</div>
 					</a>
 				</div>
@@ -465,7 +510,7 @@ let swiper = new Swiper('.swiper', {
     
     	loop: true, //бесконечная прокрутка
     
-    	speed: 1500, //скорость
+    	speed: 2000, //скорость
     
     	keyboard: { //управление с клавы
     		enabled: true,

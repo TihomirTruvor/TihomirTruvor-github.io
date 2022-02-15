@@ -61,6 +61,13 @@
 	}
 }
 
+.big-text {
+	line-height: 45px;
+	font-family: DINPro-Light,sans-serif;
+	font-size: 1.2rem;
+	font-weight: lighter;
+}
+
 /*=================VAR======================*/
 @background-black: #333333;
 @var-width: 1200px;
@@ -136,6 +143,7 @@ li {
 		position: fixed;
 		z-index: 5;
 		width: 100%;
+		max-width: 1920px;
 		background-color: @background-black;
 
 		.container {
@@ -437,6 +445,7 @@ li {
 	.swiper {
 		position:absolute !important;
 		width: 100%;
+		height: 100vh;
 		z-index: 0 !important;
 		.swiper-wrapper {
 			.slider {
@@ -454,6 +463,42 @@ li {
 				.mobile-back-image {
 					display: none;
 				}
+
+				/*.back-image {
+					//background-size: 90% auto;
+						animation-name: width__back;
+						animation-duration: 3s;
+						animation-iteration-count: infinite;
+						animation-timing-function: ease;
+						//transition: all 4s ease-in;
+						//animation: move 5s ease-in-out;
+						//animation-direction: alternate;
+
+						opacity: 1;
+						//transition: opacity .7s;
+					}
+
+					@keyframes width__back {
+						0% {
+							transform: scale(1.2);
+							//opacity: 1;
+							//transform: skewX(0deg);
+						}
+
+						100% {
+							transform: scale(1);
+							//opacity: 0;
+							//transform: skewX(5deg) scale(1, 0.95);
+							//transform: matrix(1, 3, 1, 1, 2, 2);
+						}
+
+						100% {
+							transform: scale(1.2);
+							opacity: 0.0;
+							//transform: skewX(5deg) scale(1, 0.95);
+							//transform: matrix(1, 3, 1, 1, 2, 2);
+						}
+					}*/
 
 				.mask {
 					position:fixed;
@@ -496,10 +541,7 @@ li {
 						.slider-text {
 							max-width: 600px;
 							margin-bottom: 3rem;
-							line-height: 45px;
-							font-family: 'DINPro-Light', sans-serif;
-							font-size: 1.2rem;
-							font-weight: lighter;
+							.big-text;
 							color: rgb(209, 209, 209);
 
 						}
@@ -507,8 +549,6 @@ li {
 						.slider-button {
 							cursor: pointer;
 							max-width: fit-content;
-							//height: 60px;
-							//.green-button;
 							padding: 20px 68px 20px 68px;
 							font-size: 1.2rem;
 							//color: rgb(209, 209, 209);
@@ -527,7 +567,52 @@ li {
 		}
 	}
 
+	.product_wrapper {
+		width: 100%;
+		height: 147px;
+		background-color: #748943;
 
+		.product_wrapper_container {
+			display: flex;
+			justify-content: space-between;
+			max-width: @var-width;
+			min-width: @var-min-width;
+			margin: 0 auto;
+			height: 100%;
+
+			.product_item {
+				display: flex;
+				align-self: center;
+
+				img {
+					display: flex;
+					align-self: center;
+					margin-right: 1.4rem;
+				}
+
+				.product_item_content {
+					display: flex;
+					flex-direction: column;
+					color: #fff;
+
+					h3 {
+						margin-top: 0;
+						font-size: 1.2rem !important;
+						font-weight: normal;
+						line-height: 0.5;
+					}
+
+					p {
+						display: flex;
+						flex-wrap: wrap;
+						margin: 0;
+						line-height: 1.7;
+						max-width: 100px;
+					}
+				}
+			}
+		}
+	}
 /*!=================MAIN CONTENT======================*/
 	//Анимация плавного появления
 	.el-animation {
@@ -540,108 +625,180 @@ li {
 	}
 
 .main-content {
-	max-width: @var-width;
+	max-width: 1920px;
 	min-width: @var-min-width;
 	min-height: calc(100vh - 400px);
-	padding: @var-padding-width;
+	//padding: @var-padding-width;
 	margin: 0 auto;
-	margin-top: 40px;
+	//margin-top: 40px;
 
 	.categories {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 
 		.left-container {
-			width: 590px;
-			margin-right: 20px;
+			position: relative;
+			width: 100%;
 
 			.product {
+				position: relative;
 				overflow: hidden;
-				border-radius: 15px;
-
-				a {
-					display: block;
-					position: relative;
-					width: 100%;
-					transition: 1s;
-
-					&:hover {
-						transform: scale(1.05);
-					}
-				
-					.h2-content {
-						position: absolute;
-						width: 100%;
-						top: 45%;
-						left: 0%;
-						text-align: center;
-
-						h2 {
-						.h1-title;
-						text-shadow: 1px 1px 1px #333333;
-						}
-					}
-				}
-
-				a img {
-					max-width: 100%;
-					border-radius: 15px;
-				}
-
-				.mobile-img-product {
-					display: none;
-				}
-			}
-		}
-		.right-container {
-			display: flex;
-			flex-wrap: wrap;
-			width: 590px;
-			transition: 2s opacity;
-
-			.about-greennovo {
-				margin-top: 18px;
-			}
-
-			.innovation,
-			.about-greennovo {
-				overflow: hidden;
-				border-radius: 15px;
+				height: 600px;
 
 				a {
 					display: block;
 					position: relative;
 					width: 100%;
 					height: 100%;
-					transition: 1s;
+					transition: 0.5s;
 
 					&:hover {
-						transform: scale(1.05);
+						transform: scale(1.03);
 					}
 				
 					.h2-content {
 						position: absolute;
 						width: 100%;
-						top: 40%;
+						top: 7.5rem;
 						left: 0%;
 						text-align: center;
 
 						h2 {
+
 						.h1-title;
-						font-size: 30px;
+						font-size: 3.5rem;
 						text-shadow: 1px 1px 1px #333333;
 						}
+
+						.delimiter {
+							width: 10%;
+							height: 1px;
+							background-color: #fff;
+							margin: 0 auto;
+						}
+
+						p {
+							max-width: 600px;
+							margin: 0 auto;
+							margin-top: 2rem;
+							.big-text;
+						}
+					}
+
+					.mask_categories {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: #000000;
+						opacity: 0.3;
+
 					}
 				}
 
-				a img {
-					max-width: 100%;
-					border-radius: 15px;
+				a .img-product {
+					background-image: url('https://source.unsplash.com/random/1920x1080');
+					background-attachment: fixed;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					width: 100%;
+					height: 100%;
+					//border-radius: 15px;
 				}
 
-				.mobile-img-innovation,
-				.mobile-img-about {
+				a .mobile-img-product {
+					display: none;
+				}
+			}
+		}
+		.right-container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			transition: 2s opacity;
+
+			.innovation,
+			.about-greennovo {
+				position: relative;
+				overflow: hidden;
+				height: 600px;
+
+				a {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 100%;
+					transition: 0.5s;
+
+					&:hover {
+						transform: scale(1.03);
+					}
+				
+					.h2-content {
+						position: absolute;
+						width: 100%;
+						top: 7.5rem;
+						left: 0%;
+						text-align: center;
+
+						h2 {
+
+						.h1-title;
+						font-size: 3.5rem;
+						text-shadow: 1px 1px 1px #333333;
+						}
+
+						.delimiter {
+							width: 10%;
+							height: 1px;
+							background-color: #fff;
+							margin: 0 auto;
+						}
+
+						p {
+							max-width: 600px;
+							margin: 0 auto;
+							margin-top: 2rem;
+							.big-text;
+						}
+					}
+
+					.mask_categories {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: #000000;
+						opacity: 0.3;
+
+					}
+				}
+
+				a .img-innovation,
+				a .img-about {
+					background-attachment: fixed;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					width: 100%;
+					height: 100%;
+				}
+
+				a .img-innovation {
+					background-image: url('https://source.unsplash.com/random/1680x900');
+				}
+
+				a .img-about {
+					background-image: url('https://source.unsplash.com/random/1920x1080');
+				}
+
+				a .mobile-img-innovation,
+				a .mobile-img-about {
 					display: none;
 				}
 			}
@@ -651,7 +808,7 @@ li {
 	.statistic {
 		display: flex;
 		justify-content: space-between;
-		width: 100%;
+		width: @var-width;
 		margin: 0 auto;
 		margin-top: 40px;
 		//text-align: center;
