@@ -21,12 +21,13 @@
 </head>
 <body>
 <!-- Шапка сайта -->
-	<header class="main-header">
+	<header class="main-header item-header">
 		<div class="top-wrapper">
 			<div class="container">
 				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
 					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
 				</a>
+<!-- Меню -->
 				<nav class="navigation">
 
 					<input id="menu__toggle" type="checkbox" /><!--Для мобильного меню-->
@@ -34,48 +35,87 @@
 						<span></span>
 					</label>
 
-					<div class="container1">
-						<div class="nav-item">
-							<a class="nav-button" href="#">About Greennovo</a>
+					<div class="navigation__container1">
+						<div class="navigation__wrapper">
+							<div class="navigation__item">
+								<a class="navigation__button" href="#">About Greennovo</a>
+							</div>
+							<div class="navigation__item">
+								<a class="navigation__button" href="#">Product Center</a>
+								<ul class="navigation__sub-menu">
+									<li><a href="#">Greennovo Motor</a></li>
+									<li><a href="#">Battery</a></li>
+									<li><a href="#">Display</a></li>
+									<li><a href="#">Controller</a></li>
+								</ul>
+								<div class="arrow-mini"></div>
+							</div>
+							<div class="navigation__item"><div class="navigation__button">R&D Innovation</div>
+								<ul class="navigation__sub-menu">
+									<li><a href="#">Innovation Idea</a></li>
+									<li><a href="#">Qualification Certificates</a></li>
+									<li><a href="#">Test Laboratory</a></li>
+									<li><a href="#">Manufacturing Base</a></li>
+								</ul>
+								<div class="arrow-mini"></div>
+							</div>
+							<div class="navigation__item"><a class="navigation__button" href="#Support">Support&Service</a>
+								<ul class="navigation__sub-menu">
+									<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
+									<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
+									<li class="sub-menu-item"><a href="#popup-as">After-Sale Service</a></li>
+									<li class="sub-menu-item"><a href="#popup-ts">Technology Support</a></li>
+								</ul>
+								<div class="arrow-mini"></div>
+							</div>
 						</div>
-						<div class="nav-item">
-							<a class="nav-button" href="#">Product Center</a>
-							<ul class="sub-menu">
-								<li><a href="#">Greennovo Motor</a></li>
-								<li><a href="#">Battery</a></li>
-								<li><a href="#">Display</a></li>
-								<li><a href="#">Controller</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
-							<ul class="sub-menu">
-								<li><a href="#">Innovation Idea</a></li>
-								<li><a href="#">Qualification Certificates</a></li>
-								<li><a href="#">Test Laboratory</a></li>
-								<li><a href="#">Manufacturing Base</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
-							<ul class="sub-menu">
-								<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
-								<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
-								<li class="sub-menu-item"><a href="#popup-as">After-Sale Service</a></li>
-								<li class="sub-menu-item"><a href="#popup-ts">Technology Support</a></li>
-							</ul>
-							<div class="arrow-mini"></div>
-						</div>
-						<div class="nav-item"><a class="nav-button" href="#Cont">Contact Us</a></div>
+						<div class="navigation__item"><a class="navigation__button" href="#Cont">Contact Us</a></div>
 					</div>
 				</nav>
+<!-- Конец меню -->
 			</div>
 		</div>
 		<div class="bottom-wrapper">
 			<div class="container">
 				<div class="language">
-					<a href="#">English</a>
+					<button class="button__lang">Language</button>
+					<div class="button__lang__sub-lang">
+						<a href="../cn/">中国人</a>
+						<a href="https://greennovo.pro">English</a>
+					</div>
 				</div>
+<script type="text/javascript">
+	// Меню
+	var lang = document.getElementsByClassName('language');
+
+	for(var i=0; i<lang.length; i++) {
+		lang[i].addEventListener("mouseenter", showSub, false);
+		lang[i].addEventListener("mouseleave", hideSub, false);
+	}
+
+	function showSub(e) { // Отображение подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "auto";
+			this.children[1].style.overflow = "visible";
+			this.children[1].style.opacity = "1";
+			this.children[1].style.display = "flex";
+		} else {
+			return false;
+		}
+	}
+
+	function hideSub(e) { // Скрытие подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "0px";
+			this.children[1].style.overflow = "hidden";
+			this.children[1].style.opacity = "0";
+			this.children[1].style.display = "none";
+		}
+		else {
+			return false;
+		}
+	}
+</script>
 <!-- Поиск -->
 				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
 					<input type="search" name="Search" class="main-search" placeholder="Search">
@@ -92,52 +132,74 @@
 <!-- Контент -->
 	<main class="main-content">
 		<div class="item-wrapper"><!--Обёртка слайдера-->
-			<div class="left-slider swiper"> <!--Левая часть-->
-				<div class="item-image swiper-wrapper">
-					<div class="item-left-img swiper-slide">
-						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
-						<div class="swiper-lazy-preloader"></div>
-					</div>
-					<div class="item-left-img swiper-slide">
-						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
-						<div class="swiper-lazy-preloader"></div>
-					</div>
-					<div class="item-left-img swiper-slide">
-						<img class="item-img swiper-lazy" data-src="img/mobile-slider-img.jpg" alt="Фото товара" width="590" height="590">
-						<div class="swiper-lazy-preloader"></div>
-					</div>
-				</div>
+			<div class="left-slider no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder"> <!--Левая часть-->
+				[[msGallery]]
 			</div>
 
-			<div class="item-right-wrapper"><!--Правая часть-->
-		<div class="item-head"><!--Заголовок страницы-->
-			<h2>[[*pagetitle]]</h2>
-			<span>[[*rear-motor-text]]</span>
-		</div>
-		<div class="right-slider swiper">
-			<div class="item-content swiper-wrapper">
-				<div class="item-right-text swiper-slide"><!--1 товар-->
-					<h3>Rear motors</h3>
-					<div class="item-text">Характеристики Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ut optio, magni harum quisquam similique sint architecto velit vero laborum quia, repellendus sit, repudiandae? Sed quibusdam animi, odit optio expedita!</div>
-					<details class="all-text-wrapper">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam iure sed itaque dolorum quo adipisci. Repudiandae, omnis fuga culpa, sapiente veritatis illo! Eligendi iure voluptate unde delectus est iusto. Something small enough to escape casual notice.</p>
-						<summary class="btn-all-text">All parameters</summary>
-					</details>
+			<div class="item-right-wrapper no-margin col-xs-12 col-sm-7 body-holder"><!--Правая часть-->
 
- &tplHome=`@INLINE <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a rel="nofollow" title="[[+menutitle]]" itemprop="item" href="[[+link]]"><span itemprop="name">[[+menutitle]]</span><meta itemprop="position" content="[[+idx]]"></a></li>`
+				<div class="body" id="msProduct">
+					<form class="form-horizontal ms2_form" method="post">
+					<input type="hidden" name="id" value="[[*id]]"/>
+					<div class="star-holder inline"><div class="star" data-score="4"></div></div>
+					<div class="availability"><label>Availability:</label><span class="available">  in stock</span></div>
 					
+					<div class="title"><a href="[[~[[*id]]]]">[[*pagetitle]]</a></div>
+					<div class="brand">[[+vendor.name]]</div>
+
+					<div class="social-row">
+						<span class="st_facebook_hcount"></span>
+						<span class="st_twitter_hcount"></span>
+						<span class="st_pinterest_hcount"></span>
+					</div>
+					
+					<div class="buttons-holder">
+					  <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
+					  <a class="btn-add-to-compare" href="#">add to compare list</a>
+					</div>
+					
+					<div class="excerpt">
+					  <p>[[*introtext]]</p>
+					</div>
+					
+					<div class="prices">
+					  <div class="price-current">[[+price]] руб.</div>
+					  <div class="price-prev">[[+old_price]] руб.</div>
+					</div>
+					
+					<div class="qnt-holder">
+					  <div class="le-quantity">
+						  <a class="minus" href="#reduce"></a>
+						  <input name="count" readonly="readonly" type="text" value="1" />
+						  <a class="plus" href="#add"></a>
+						</div>
+						<button type="submit" class="le-button huge" name="ms2_action" value="cart/add">В корзину</button>
+					</div>
+					</form>
 				</div>
+
+				<!--<div class="item-head">Заголовок страницы
+					<h2>[[*pagetitle]]</h2>
+					<p>[[*content]]</p>
+					<div class="brand">[[+vendor.name]]</div>
+					<div class="price-current">[[+price]]</div>
+					<div class="price-prev">[[+old_price]]</div>
+					<div class="article">[[+article]]</div>
+					<div class="color">[[+color]]</div>
+					<div class="weight">[[+weight]]</div>
+					<div class="size">[[+size]]</div>
+					<div class="size">[[+made_in]]</div>
+					<div class="excerpt">[[*introtext]]</div>
+				</div>-->
 			</div>
-			<div class="swiper-pagination"></div><!--Пагинация (переключение между товарами)-->
-		</div>
-	</div>
 		</div>
 	</div>
 	</main>
 
+<!-- Футер -->
 	<footer class="footer">
-		<div class="footer-top-wrapper">
-			<div class="container">
+		<div class="footer__top-wrapper">
+			<div class="footer__container">
 				<ul class="list-1">
 					<li><a href="#">About Greennovo</a></li>
 					<li><a href="#">R&D Innovation</a></li>
@@ -153,7 +215,7 @@
 					<li class="mob-list-2-prod"><a href="#">Product center</a></li>
 				</ul>
 				<ul class="soc-1">
-					<li><a class="weechat" href="https://msngr.link/wc/79871170012" target="_blank"><img src="img/icon-weechat.svg" alt="иконка Вичата">WeChat: lihaistas</a></li>
+					<li><a href="https://msngr.link/wc/79871170012" target="_blank"><img src="img/icon-weechat.svg" alt="иконка Вичата">WeChat: lihaistas</a></li>
 					<li><a href="https://api.whatsapp.com/send?phone=8613632527554" target="_blank"><img src="img/icon-whatsapp.svg" alt="иконка WhatsApp">WhatsApp: +8613632527554</a></li>
 				</ul>
 				<ul class="soc-2">
@@ -163,10 +225,14 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer-bottom-wrapper">
-			<p class="footer-text">&#169; <!-- Знак копирайта-->
+		<div class="footer__bottom-wrapper">
+			<p class="footer-copyright">&#169; <!-- Знак копирайта-->
 				<script>document.write(new Date().getFullYear());</script><!-- Автоизменение года-->
 				 Greennovo Science & Technology Co., LTD</p>
+		</div>
+		<div id="cookie-notification">
+			<p>By using the greennovo.pro website, I consent to the processing of my personal data using cookies and third-party services and accept the terms of the <a href="../privacy-policy.html">Privacy Policy</a></p>
+			<button class="button cookie_accept">Accept</button>
 		</div>
 	</footer>
 
@@ -205,6 +271,11 @@ let swiperImg = new Swiper(document.querySelector('.left-slider'), {
 
 	autoHeight: true, //автовысота
 
+	navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
 	/*autoplay: {
 		delay: 3500,
 		disableOnInteraction: false, //остановка после ручной прокрутки
@@ -236,7 +307,7 @@ let swiperImg = new Swiper(document.querySelector('.left-slider'), {
 });
 
 let menu = ['GNM-R1', 'GNM-R2', 'GNM-R3'] //массив текста для пагинации
-let swiperText = new Swiper ('.right-slider', {
+let swiperText = new Swiper ('.left-slider', {
 	//Пагинация с текстом
 	pagination: {
 		el: '.swiper-pagination',

@@ -8,6 +8,7 @@
 	<link type="image/png" sizes="32x32" rel="icon" href="img/favicon_32.png">
 	<link type="image/png" sizes="96x96" rel="icon" href="img/favicon_96.png">
 	<link type="image/png" sizes="120x120" rel="icon" href="img/favicon_120.png">
+	<link type="image/png" sizes="152x152" rel="icon" href="img/favicon_152.png">
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -21,26 +22,26 @@
 </head>
 <body>
 <!-- Шапка сайта -->
-	<header class="main-header">
+	<header class="main-header product-header">
 		<div class="top-wrapper">
 			<div class="container">
 				<a class="header-logo" href="index.html"> <!-- Логотип сайта -->
 					<img src="img/logo.gif" width="95" height="68" alt="logo greennovo">
 				</a>
+<!-- Меню -->
 				<nav class="navigation">
-
 					<input id="menu__toggle" type="checkbox" /><!--Для мобильного меню-->
 					<label class="menu__btn" for="menu__toggle"><!--Для мобильного меню-->
 						<span></span>
 					</label>
 
-					<div class="container1">
-						<div class="nav-item">
-							<a class="nav-button" href="#">About Greennovo</a>
+					<div class="navigation__container1">
+						<div class="navigation__item">
+							<a class="navigation__button" href="#">About Greennovo</a>
 						</div>
-						<div class="nav-item">
-							<a class="nav-button" href="#">Product Center</a>
-							<ul class="sub-menu">
+						<div class="navigation__item">
+							<a class="navigation__button" href="#">Product Center</a>
+							<ul class="navigation__sub-menu">
 								<li><a href="#">Greennovo Motor</a></li>
 								<li><a href="#">Battery</a></li>
 								<li><a href="#">Display</a></li>
@@ -48,8 +49,8 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#">R&D Innovation</a>
-							<ul class="sub-menu">
+						<div class="navigation__item"><div class="navigation__button">R&D Innovation</div>
+							<ul class="navigation__sub-menu">
 								<li><a href="#">Innovation Idea</a></li>
 								<li><a href="#">Qualification Certificates</a></li>
 								<li><a href="#">Test Laboratory</a></li>
@@ -57,8 +58,8 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#">Support&Service</a>
-							<ul class="sub-menu">
+						<div class="navigation__item"><a class="navigation__button" href="#Support">Support&Service</a>
+							<ul class="navigation__sub-menu">
 								<li class="sub-menu-item"><a href="#popup-gs">Global Service /Russia Center</a></li>
 								<li class="sub-menu-item"><a href="#popup-sc">Service Concep</a></li>
 								<li class="sub-menu-item"><a href="#popup-as">After-Sale Service</a></li>
@@ -66,16 +67,54 @@
 							</ul>
 							<div class="arrow-mini"></div>
 						</div>
-						<div class="nav-item"><a class="nav-button" href="#Cont">Contact Us</a></div>
+						<div class="navigation__item"><a class="navigation__button" href="#Cont">Contact Us</a></div>
+						<div class="navigation__item"><a class="navigation__shop_button" target="_blank" href="#">Our Shop</a></div>
 					</div>
 				</nav>
+<!-- Конец меню -->
 			</div>
 		</div>
 		<div class="bottom-wrapper">
 			<div class="container">
 				<div class="language">
-					<a href="#">English</a>
+					<button class="button__lang">Language</button>
+					<div class="button__lang__sub-lang">
+						<a href="../cn/">中国人</a>
+						<a href="https://greennovo.pro">English</a>
+					</div>
 				</div>
+<script type="text/javascript">
+	// Меню
+	var lang = document.getElementsByClassName('language');
+
+	for(var i=0; i<lang.length; i++) {
+		lang[i].addEventListener("mouseenter", showSub, false);
+		lang[i].addEventListener("mouseleave", hideSub, false);
+	}
+
+	function showSub(e) { // Отображение подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "auto";
+			this.children[1].style.overflow = "visible";
+			this.children[1].style.opacity = "1";
+			this.children[1].style.display = "flex";
+		} else {
+			return false;
+		}
+	}
+
+	function hideSub(e) { // Скрытие подменю
+		if(this.children.length>1) {
+			this.children[1].style.height = "0px";
+			this.children[1].style.overflow = "hidden";
+			this.children[1].style.opacity = "0";
+			this.children[1].style.display = "none";
+		}
+		else {
+			return false;
+		}
+	}
+</script>
 <!-- Поиск -->
 				<form action="https://tihomirtruvor.github.io/" method="GET" class="search">
 					<input type="search" name="Search" class="main-search" placeholder="Search">
@@ -87,50 +126,219 @@
 					<input type="button" value=" " class="mobile-close-search" title="Закрыть поиск">
 			</div>
 		</div>
+<!-- Слайдер -->
+		<div class="product-slider swiper">
+			<div class="swiper-wrapper">
+				<div class="product-slide swiper-slide">
+					<img class="product-slide__back-image" src="img/sliderNew1.jpg" alt="фон 1 слайдера">
+					<img class="product-slide__mobile-back-image" src="img/sliderNew2Mob4.jpg" alt="1 фон мобильного слайдера">
+					<div class="slider-mask"></div>
+				</div>
+				<div class="product-slide swiper-slide">
+					<img class="product-slide__back-image" src="img/sliderNew2.jpg" alt="фон 2 слайдера">
+					<img class="product-slide__mobile-back-image" src="img/mobile-slider-img.jpg" alt="1 фон мобильного слайдера">
+					<div class="slider-mask"></div>
+				</div>
+			</div>
+		</div>
+		<div class="product-head">
+			<h1>Product center</h1>
+			<span>Greennovo Products are known as highest quality and reliable service support. We dedicated in producing innovative&high-quality products to all customers. Our goal is to make all customers enjoy their riding by using our products.</span>
+		</div>
 	</header>
 
 <!-- Контент -->
 	<main class="main-content">
-		<div class="product-head">
-			<h2>Product center</h2>
-			<span>Greennovo Products are known as highest quality and reliable service support. We dedicated in producing innovative&high-quality products to all customers. Our goal is to make all customers enjoy their riding by using our products.</span>
+		<div class="product-navigation">
+			<form id="id_form_radio_group" class="form_radio_group">
+					<input id="radio-1" type="radio" name="radio" value="1" checked>
+					<label for="radio-1" class="form_radio_group-item">All products</label>
+
+					<input id="radio-2" type="radio" name="radio" value="2">
+					<label for="radio-2" class="form_radio_group-item">Greennovo motor</label>
+
+					<input id="radio-3" type="radio" name="radio" value="3">
+					<label for="radio-3" class="form_radio_group-item">Greennovo display</label>
+
+					<input id="radio-4" type="radio" name="radio" value="4">
+					<label for="radio-4" class="form_radio_group-item">Greennovo battery</label>
+
+					<input id="radio-5" type="radio" name="radio" value="5">
+					<label for="radio-5" class="form_radio_group-item">Greennovo controller</label>
+			</form>
 		</div>
 		<div class="product-container">
-			
-			<div class="product-content-top">
-				<div class="inner-product">
-					<a href="#">
-						<img class="img-inner-product" src="img/innovation.jpg" alt="Фон категории товаров">
-						<h3>Greennovo Motor</h3>
+			<div id="product-motor">
+				<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>Front Motor</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+					<div class="product-mask"></div>
 					</a>
 				</div>
-				<div class="inner-product">
-					<a href="#">
-						<img class="img-inner-product" src="img/innovation.jpg" alt="Фон категории товаров">
-						<h3>Battery</h3>
+				<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>Rear Motor</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+
+				</div>
+			</div>
+			<div id="product-display">
+					<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>LED Display</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+
+				</div>
+				<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>LSD Display</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
 					</a>
 				</div>
 			</div>
-			<div class="product-content-bottom">
-				<div class="inner-product">
-					<a href="#">
-						<img class="img-inner-product" src="img/innovation.jpg" alt="Фон категории товаров">
-						<h3>Controller</h3>
+			<div id="product-battery">
+					<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>Downtube type battery</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+					
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+					
+				</div>
+				<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>Rear carrier type battery</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
+					</a>
+					
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+					<div class="product-mask"></div>
 					</a>
 				</div>
-				<div class="inner-product">
-					<a href="#">
-						<img class="img-inner-product" src="img/innovation.jpg" alt="Фон категории товаров">
-						<h3>Display</h3>
+			</div>
+			<div id="product-controller">
+					<div class="product-container__inner">
+					<div class="product-container__inner_title"><h3>Greennovo Controller</h3><a href="#">More</a></div>
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+					<div class="product-mask"></div>
+					</a>
+
+					<a href="#" class="inner-product">
+						<img class="watermark" src="img/watermark1.png" width="40" height="40">
+						<img class="inner-product__picture" src="img/GN-C3.jpg" width="285">
+						<div class="inner-product__text">
+							<h4>Greennovo controller</h4>
+							<p>Noiseless and Strong Power are key characteristic for F-Series motors.</p>
+						</div>
+						<div class="product-mask"></div>
 					</a>
 				</div>
 			</div>
 		</div>
 	</main>
 
+<!-- Футер -->
 	<footer class="footer">
-		<div class="footer-top-wrapper">
-			<div class="container">
+		<div class="footer__top-wrapper">
+			<div class="footer__container">
 				<ul class="list-1">
 					<li><a href="#">About Greennovo</a></li>
 					<li><a href="#">R&D Innovation</a></li>
@@ -156,10 +364,14 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer-bottom-wrapper">
-			<p class="footer-text">&#169; <!-- Знак копирайта-->
+		<div class="footer__bottom-wrapper">
+			<p class="footer-copyright">&#169; <!-- Знак копирайта-->
 				<script>document.write(new Date().getFullYear());</script><!-- Автоизменение года-->
 				 Greennovo Science & Technology Co., LTD</p>
+		</div>
+		<div id="cookie-notification">
+			<p>By using the greennovo.pro website, I consent to the processing of my personal data using cookies and third-party services and accept the terms of the <a href="../privacy-policy.html">Privacy Policy</a></p>
+			<button class="button cookie_accept">Accept</button>
 		</div>
 	</footer>
 
@@ -172,6 +384,54 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 <!-- СКРИПТЫ -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script><!-- Свайпер -->
+
+<script type="text/javascript">
+	//Свайпер
+let swiperProduct = new Swiper(document.querySelector('.product-slider'), {
+        
+    	autoplay: {
+    		delay: 4000,
+    		disableOnInteraction: false, //остановка после ручной прокрутки
+    	},
+    
+    	loop: true, //бесконечная прокрутка
+    
+    	speed: 2000, //скорость
+    
+    	keyboard: { //управление с клавы
+    		enabled: true,
+    		onlyInViewport: true,
+    		pageUpDown: true,
+    	},
+    
+    	effect: 'fade', //Эффект появления
+    		/*creativeEffect: {
+    			prev: {
+    				// will set `translateZ(-400px)` on previous slides
+    				translate: [0, 0, -300],
+    			},
+    			next: {
+    				// will set `translateX(100%)` on next slides
+    				translate: ['100%', 0, 0],
+    			},
+    	},*/
+    
+    	//autoHeight: true, //автовысота
+    	
+/*lazy: { // поочередная загрузка картинок
+	loadOnTransitionStart: false,
+	loadPrevNext: false,
+	},
+preloadImages: true,*/
+    
+//parallax: true,
+//grabCursor: true,
+//slideToClickedSlide: true,
+    });
+</script>
+
 <script src="scripts.js"></script>
 </body>
 </html>
